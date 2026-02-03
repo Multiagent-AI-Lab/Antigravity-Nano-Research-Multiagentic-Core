@@ -104,15 +104,15 @@ Cada unidad sigue el **Gold Standard** definido en [GOVERNANCE.md](../GOVERNANCE
 
 ## 📊 Progreso del Curso
 
-| Unidad | Estado | Notebook | Ejercicios |
-|--------|--------|----------|------------|
-| 1. Modelado Nanoescala | ✅ Disponible | ✅ | 🚧 |
-| 2. Simulación Molecular | 🚧 En desarrollo | - | - |
-| 3. ML Fundamentos | 🚧 En desarrollo | - | - |
-| 4. IA Aplicada | 🚧 En desarrollo | - | - |
-| 5. Multi-Agente | 🚧 En desarrollo | - | - |
-| 6. Proyecto Final | 🚧 En desarrollo | - | - |
-| 7. Computación Profesional | 🚧 En desarrollo | - | - |
+| Unidad | Estado | Notebook |
+|--------|--------|----------|
+| 1. Modelado Nanoescala | ✅ Disponible | ✅ |
+| 2. Simulación Molecular | 🚧 En desarrollo | - |
+| 3. ML Fundamentos | 🚧 En desarrollo | - |
+| 4. IA Aplicada | 🚧 En desarrollo | - |
+| 5. Multi-Agente | 🚧 En desarrollo | - |
+| 6. Proyecto Final | 🚧 En desarrollo | - |
+| 7. Computación Profesional | 🚧 En desarrollo | - |
 
 ---
 
