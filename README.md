@@ -6,7 +6,7 @@
 
 > **Sistema Multi-Agente para Investigación en Nanotecnología e Inteligencia Artificial**
 
-Este repositorio contiene la infraestructura base para desarrollar investigación de nivel doctoral en **IA aplicada a Nanotecnología** usando **Antigravity** como entorno de desarrollo multi-agente.
+Este repositorio contiene la infraestructura base para desarrollar **Investigación de Primer Nivel** en IA aplicada a Nanotecnología usando **Antigravity** como entorno de desarrollo multi-agente.
 
 ---
 
