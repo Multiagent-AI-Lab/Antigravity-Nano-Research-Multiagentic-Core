@@ -60,15 +60,15 @@ Este proyecto implementa un **Consejo de 7 Expertos** especializados:
 
 ```mermaid
 flowchart LR
-    A[@Architect<br/>Diseño] --> B[@Scientist<br/>Teoría]
-    B --> C[@Engineer<br/>Código]
-    C --> D[@Safety_Gate<br/>Validación]
-    D -->|✓ Safe| E[@Analyst<br/>Análisis]
-    D -->|✗ Error| C
-    E --> F[@Librarian<br/>Validación Experimental]
-    F --> G[@QA<br/>Auditoría]
-    G -->|✓ Pass| H[Publicar]
-    G -->|✗ Fallo| B
+    A["@Architect<br/>Diseño"] --> B["@Scientist<br/>Teoría"]
+    B --> C["@Engineer<br/>Código"]
+    C --> D["@Safety_Gate<br/>Validación"]
+    D -->|"✓ Safe"| E["@Analyst<br/>Análisis"]
+    D -->|"✗ Error"| C
+    E --> F["@Librarian<br/>Validación Experimental"]
+    F --> G["@QA<br/>Auditoría"]
+    G -->|"✓ Pass"| H["Publicar"]
+    G -->|"✗ Fallo"| B
 ```
 
 ### Agentes y sus Roles
