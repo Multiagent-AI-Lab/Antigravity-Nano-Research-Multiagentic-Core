@@ -1,0 +1,26 @@
+# --- CORE SCIENTIFIC STACK ---
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+sympy
+
+# --- NANOTECHNOLOGY & PHYSICS ---
+ase                   # Atomic Simulation Environment
+mendeleev>=0.9.0      # Relaxed from 0.12.0
+networkx              # Graph theory
+
+# --- VISUALIZATION ---
+pydot
+graphviz
+
+# --- SYSTEM & JUPYTER ---
+notebook
+ipykernel
+ipython
+
+# --- AGENTIC FRAMEWORKS (Optional for Unit 5) ---
+# crewai
+# langgraph
+# langchain
