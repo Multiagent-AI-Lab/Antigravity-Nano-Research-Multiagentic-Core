@@ -82,8 +82,6 @@ Cada agente opera utilizando un set específico de competencias de la *Master Li
 
 ## 4. The Gold Standard
 
-La **UNIDAD_6** (y ahora la **UNIDAD_1 Versión Pro**) se establece como el **Modelo Obligatorio** de calidad.
-
 ### Definición de "Calidad":
 1.  **Explicaciones Claras**: Cada concepto introduce el "por qué" antes del "cómo".
 2.  **Código Documentado**: Comentarios tipo "Master Class" que explican la física detrás del algoritmo.
