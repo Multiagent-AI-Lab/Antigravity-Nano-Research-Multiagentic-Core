@@ -131,6 +131,38 @@ Ver [SKILLS_ATTRIBUTION.md](SKILLS_ATTRIBUTION.md) para detalles completos.
 
 ---
 
+## 📖 Contenido Educativo
+
+Este repositorio incluye **material educativo estructurado** para aprender IA aplicada a Nanotecnología:
+
+### ✅ Unidad 1: Modelado a Nanoescala
+- Fundamentos de simulación molecular
+- Atomic Simulation Environment (ASE)
+- Optimización de nanopartículas de oro
+- Análisis estructural (RDF, coordinación)
+- **[📓 Ir a la Unidad 1](educational_content/unit_01_nanoscale_modeling/)**
+
+### 🚧 Próximas Unidades
+- Unidad 2: Simulación Molecular Avanzada (MD, DFT)
+- Unidad 3: Machine Learning para Nanomateriales
+- Unidad 4: IA Aplicada a Datos Experimentales
+- Unidad 5: Sistemas Multi-Agente
+- Unidad 6: Proyecto de Integración
+- Unidad 7: Computación Científica Profesional
+
+**[📚 Ver todo el contenido educativo](educational_content/)**
+
+---
+
+## 📚 Documentación
+
+- **[GOVERNANCE.md](GOVERNANCE.md)** - Roles del Consejo de Expertos y pipeline de trabajo
+- **[INSTALL.md](INSTALL.md)** - Guía detallada de instalación y troubleshooting
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Cómo contribuir al proyecto
+- **[SKILLS_ATTRIBUTION.md](SKILLS_ATTRIBUTION.md)** - Créditos y origen de las skills externas
+
+---
+
 ## ❓ Por qué Python 3.11?
 
 En el ecosistema científico, la **estabilidad** es tan crítica como el rendimiento:
