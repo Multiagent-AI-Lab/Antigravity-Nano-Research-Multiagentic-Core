@@ -1,10 +1,12 @@
 # GOVERNANCE.md
 
-## 1. Misión del Consejo
+## 1. Misión del Consejo de Expertos
+
 El objetivo primordial de este proyecto es el **Desarrollo de Inteligencia Artificial aplicada a la Nanotecnología** bajo tres pilares inquebrantables:
-1.  **Rigor Académico**: Fundamentación teórica de nivel doctoral.
-2.  **Perfección Pedagógica**: Claridad didáctica para formar a futuros científicos.
-3.  **Exactitud Matemática**: Precisión absoluta en formulaciones y simulaciones.
+
+1.  **Rigor de Investigación**: Fundamentación teórica alineada con estándares de investigación de primer nivel para publicaciones científicas.
+2.  **Excelencia Didáctica**: Claridad en la transmisión del conocimiento para formar a la próxima generación de científicos, desde licenciatura hasta posgrado.
+3.  **Exactitud Científica Integrada**: Precisión absoluta en el modelado físico, síntesis química y formulación matemática para garantizar simulaciones realistas.
 
 ---
 
