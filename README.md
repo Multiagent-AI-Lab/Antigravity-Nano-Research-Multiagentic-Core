@@ -142,8 +142,14 @@ Este repositorio incluye **material educativo estructurado** para aprender IA ap
 - Análisis estructural (RDF, coordinación)
 - **[📓 Ir a la Unidad 1](educational_content/unit_01_nanoscale_modeling/)**
 
+### ✅ Unidad 2: Simulación Molecular Avanzada (2 notebooks)
+- Dinámica Molecular (MD) con diferentes potenciales
+- Teoría del Funcional de la Densidad (DFT)
+- Optimización de estructuras y propiedades electrónicas
+- Nanofabricación computacional
+- **[📓 Ir a la Unidad 2](educational_content/unit_02_molecular_simulation/)**
+
 ### 🚧 Próximas Unidades
-- Unidad 2: Simulación Molecular Avanzada (MD, DFT)
 - Unidad 3: Machine Learning para Nanomateriales
 - Unidad 4: IA Aplicada a Datos Experimentales
 - Unidad 5: Sistemas Multi-Agente

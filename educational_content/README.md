@@ -24,12 +24,29 @@ Esta sección contiene material educativo estructurado para aprender **IA aplica
 
 ---
 
-## 🚧 Próximas Unidades (En Desarrollo)
+### ✅ Unidad 2: Simulación Molecular Avanzada
+**Ruta**: [`unit_02_molecular_simulation/`](unit_02_molecular_simulation/)
 
-### Unidad 2: Simulación Molecular Avanzada
-- Dinámica Molecular (MD)
-- Teoría del Funcional de la Densidad (DFT)
-- Nanofabricación computacional
+**Contenido** (2 notebooks):
+- **Parte 1**: Dinámica Molecular (MD)
+  - Potenciales interatómicos (Lennard-Jones, EAM, Tersoff)
+  - Ensembles termodinámicos (NVE, NVT, NPT)
+  - Análisis de trayectorias y propiedades de transporte
+- **Parte 2**: DFT y Nanofabricación
+  - Teoría del Funcional de la Densidad (DFT)
+  - Optimización de estructuras
+  - Cálculo de propiedades electrónicas
+  - Diseño de nanoestructuras
+
+**Nivel**: Licenciatura avanzada - Posgrado  
+**Duración estimada**: 7-9 horas (ambas partes)  
+**Prerrequisitos**: Unidad 1, mecánica cuántica básica, termodinámica estadística (recomendado)
+
+[📓 Ir a la Unidad 2](unit_02_molecular_simulation/)
+
+---
+
+## 🚧 Próximas Unidades (En Desarrollo)
 
 ### Unidad 3: Machine Learning para Nanomateriales
 - Fundamentos de ML
@@ -107,7 +124,7 @@ Cada unidad sigue el **Gold Standard** definido en [GOVERNANCE.md](../GOVERNANCE
 | Unidad | Estado | Notebook |
 |--------|--------|----------|
 | 1. Modelado Nanoescala | ✅ Disponible | ✅ |
-| 2. Simulación Molecular | 🚧 En desarrollo | - |
+| 2. Simulación Molecular | ✅ Disponible | ✅✅ (2 notebooks) |
 | 3. ML Fundamentos | 🚧 En desarrollo | - |
 | 4. IA Aplicada | 🚧 En desarrollo | - |
 | 5. Multi-Agente | 🚧 En desarrollo | - |
