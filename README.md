@@ -149,8 +149,13 @@ Este repositorio incluye **material educativo estructurado** para aprender IA ap
 - Nanofabricación computacional
 - **[📓 Ir a la Unidad 2](educational_content/unit_02_molecular_simulation/)**
 
+### ✅ Unidad 3: Machine Learning para Nanomateriales (2 notebooks)
+- Algoritmos clásicos (Random Forest, SVM, regresión)
+- Redes neuronales y Graph Neural Networks para moléculas
+- Feature engineering y descriptores moleculares
+- **[📓 Ir a la Unidad 3](educational_content/unit_03_ml_nanomaterials/)**
+
 ### 🚧 Próximas Unidades
-- Unidad 3: Machine Learning para Nanomateriales
 - Unidad 4: IA Aplicada a Datos Experimentales
 - Unidad 5: Sistemas Multi-Agente
 - Unidad 6: Proyecto de Integración

@@ -46,9 +46,30 @@ Esta sección contiene material educativo estructurado para aprender **IA aplica
 
 ---
 
+### ✅ Unidad 3: Machine Learning para Nanomateriales
+**Ruta**: [`unit_03_ml_nanomaterials/`](unit_03_ml_nanomaterials/)
+
+**Contenido** (2 notebooks):
+- **Parte 1**: Fundamentos de ML
+  - Algoritmos clásicos (Random Forest, SVM, regresión)
+  - Feature engineering y descriptores moleculares
+  - Validación cruzada y métricas científicas
+- **Parte 2**: Redes Neuronales
+  - Arquitecturas DNN para predicción de propiedades
+  - Graph Neural Networks (GNN) para moléculas
+  - Interpretabilidad con SHAP values
+
+**Nivel**: Licenciatura avanzada - Posgrado  
+**Duración estimada**: 9-11 horas (ambas partes)  
+**Prerrequisitos**: Unidades 1 y 2, álgebra lineal, Python intermedio
+
+[📓 Ir a la Unidad 3](unit_03_ml_nanomaterials/)
+
+---
+
 ## 🚧 Próximas Unidades (En Desarrollo)
 
-### Unidad 3: Machine Learning para Nanomateriales
+### Unidad 4: IA Aplicada a Datos Experimentales
 - Fundamentos de ML
 - Redes neuronales aplicadas
 - Predicción de propiedades
@@ -125,7 +146,7 @@ Cada unidad sigue el **Gold Standard** definido en [GOVERNANCE.md](../GOVERNANCE
 |--------|--------|----------|
 | 1. Modelado Nanoescala | ✅ Disponible | ✅ |
 | 2. Simulación Molecular | ✅ Disponible | ✅✅ (2 notebooks) |
-| 3. ML Fundamentos | 🚧 En desarrollo | - |
+| 3. ML Fundamentos | ✅ Disponible | ✅✅ (2 notebooks) |
 | 4. IA Aplicada | 🚧 En desarrollo | - |
 | 5. Multi-Agente | 🚧 En desarrollo | - |
 | 6. Proyecto Final | 🚧 En desarrollo | - |
