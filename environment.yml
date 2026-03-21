@@ -18,3 +18,5 @@ dependencies:
   - openmm
   - mendeleev
   - pip
+  - pip:
+    - pycaret>=3.3.0
