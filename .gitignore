@@ -82,3 +82,25 @@ mp_config.json
 *.pdb
 *.traj
 *.dump
+
+# Notebook backup files
+*.bak_*
+*.bak
+
+# Model artifacts (generated during training)
+*.pth
+*.pkl
+
+# Generated plots (auto-created by notebooks)
+educational_content/unit_03_ml_nanomaterials/*.png
+
+# Large downloaded datasets
+educational_content/unit_03_ml_nanomaterials/data/MNIST/
+
+# Internal scripts / audit docs (not for publication)
+verify_notebook_quality*.py
+AUDITORIA_CUMPLIMIENTO.md
+project_memory.md
+logs.log
+remove_output.txt
+remove_badges_u1_u2.py

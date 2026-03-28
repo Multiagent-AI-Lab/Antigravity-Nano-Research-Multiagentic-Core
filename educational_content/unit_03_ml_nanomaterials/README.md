@@ -1,53 +1,80 @@
-# Unidad 3: Machine Learning para Nanomateriales
+# Unidad 3: Machine Learning y Redes Neuronales para Nanomateriales
 
-**Fundamentos de ML y Redes Neuronales aplicadas a Nanociencia**
-
----
-
-## 🎯 Objetivos de Aprendizaje
-
-Al completar esta unidad, serás capaz de:
-
-1. ✅ Comprender los fundamentos matemáticos del Machine Learning
-2. ✅ Aplicar algoritmos clásicos de ML a datos de nanomateriales
-3. ✅ Diseñar y entrenar redes neuronales para predicción de propiedades
-4. ✅ Preprocesar datos experimentales y de simulación para ML
-5. ✅ Evaluar y validar modelos con métricas científicas apropiadas
-6. ✅ Interpretar modelos desde una perspectiva química y física
+**Fundamentos de ML y Deep Learning aplicados a Nanociencia — PyTorch**
 
 ---
 
-## 📋 Contenido
+## Objetivos de Aprendizaje
 
-Esta unidad se divide en **dos partes complementarias**:
+Al completar esta unidad, seras capaz de:
 
-### Parte 1: Fundamentos de Machine Learning
-**Notebook**: `UNIDAD_3_ML_FUNDAMENTOS.ipynb`
-
-**Contenido**:
-- Introducción al aprendizaje automático: supervisado, no supervisado, por refuerzo
-- Regresión lineal y logística con interpretación física
-- Árboles de decisión y Random Forest para clasificación de materiales
-- Support Vector Machines (SVM) para propiedades de nanomateriales
-- Feature engineering: descriptores moleculares y cristalográficos
-- Validación cruzada y métricas de evaluación científica
-
-### Parte 2: Redes Neuronales
-**Notebook**: `UNIDAD_3_PARTE2_REDES_NEURONALES.ipynb`
-
-**Contenido**:
-- Fundamentos matemáticos: perceptrón, retropropagación, funciones de activación
-- Arquitecturas profundas (DNN) para predicción de propiedades
-- Redes neuronales de grafos (GNN) para moléculas y cristales
-- Redes convolucionales (CNN) para imágenes de microscopía
-- Transferencia de aprendizaje en aplicaciones nanoscientíficas
-- Interpretabilidad: SHAP values, mapas de atención
+1. Comprender los fundamentos matematicos del Machine Learning y las redes neuronales
+2. Aplicar algoritmos clasicos de ML (SVM, Random Forest, Gradient Boosting) a datos de nanomateriales
+3. Disenar y entrenar redes neuronales profundas en **PyTorch** para prediccion de propiedades
+4. Implementar retropropagacion simbolica con **SymPy** y entender el gradiente a fondo
+5. Usar redes de grafos (GCN) para representar moleculas y cristales
+6. Aplicar Transfer Learning (MobileNetV2) y Knowledge Distillation
+7. Entrenar un agente de Reinforcement Learning (DQN) con gymnasium
+8. Evaluar y validar modelos con metricas cientificas apropiadas
 
 ---
 
-## 🛠️ Requisitos Técnicos
+## Notebooks
 
-### Ambiente Conda
+### Notebook 1 — ML Clasico (Fundamentos)
+**Archivo**: `UNIDAD_3_ML_FUNDAMENTOS.ipynb`
+
+Pipeline completo de ML clasico aplicado a nanomateriales:
+- Regresion lineal/logistica con interpretacion fisica
+- Arboles de decision, Random Forest y Gradient Boosting
+- Support Vector Machines para propiedades de materiales
+- Feature engineering: descriptores moleculares y cristalograficos
+- Validacion cruzada y metricas (RMSE, R², MAE, F1)
+- Dataset: `nanomaterials_full_dataset.csv`
+
+### Notebook 2 — Algoritmos Clasicos Avanzados
+**Archivo**: `UNIDAD_3_ML_FUNDAMENTOS_algoritmos_clasicos.ipynb`
+
+Profundizacion con analisis comparativo:
+- Comparativa sistematica de modelos (KNN, SVM, RF, GradBoost)
+- Seleccion de caracteristicas y reduccion de dimensionalidad (PCA, UMAP)
+- Ensambles heterogeneos y stacking
+- Interpretabilidad sin caja negra
+
+### Notebook 3 — Redes Neuronales: Fundamentos (Parte I)
+**Archivo**: `UNIDAD_3_REDES_NEURONALES_FUNDAMENTOS.ipynb` — 118 celdas
+
+Notebook principal de Deep Learning de la unidad:
+
+**Fundamentos matematicos**
+- Retropropagacion simbolica con SymPy (calculo del gradiente paso a paso)
+- Funciones de activacion: ReLU, Sigmoid, Tanh, Leaky ReLU
+- Regularizacion: Dropout visualizado numericamente
+
+**Arquitecturas y entrenamiento**
+- MLP en PyTorch: prediccion de bandgap de oxidos (R²~0.9998)
+- CNN para clasificacion de nanoparticulas por TEM
+- Modelos de difusion (DDPM): generacion de distribuciones de nanoparticulas
+
+**Tecnicas avanzadas**
+- Transfer Learning con MobileNetV2 (feature extraction + fine-tuning)
+- Knowledge Distillation: comprimir modelos grandes en modelos eficientes
+- Reinforcement Learning: DQN en CartPole con gymnasium
+
+### Notebook 4 — Redes Neuronales: Avanzado (Parte II)
+**Archivo**: `UNIDAD_3_PARTE2_REDES_NEURONALES.ipynb` — 33 celdas
+
+Temas de frontera:
+- Retropropagacion simbolica extendida (SymPy + PyTorch comparacion)
+- MLP v1/v2 con sklearn (curvas de convergencia)
+- Redes de grafos convolucionales (GCN) con PyTorch Geometric para moleculas
+- Transfer Learning avanzado con MobileNetV2
+
+---
+
+## Requisitos Tecnicos
+
+### Entorno Conda
 
 ```bash
 conda activate ia_nano
@@ -55,140 +82,114 @@ conda activate ia_nano
 
 ### Dependencias Principales
 
-**Para Parte 1 (ML Clásico)**:
-- **Scikit-learn** - Algoritmos de ML
-- **NumPy**, **Pandas** - Manejo de datos
-- **Matplotlib**, **Seaborn** - Visualización
-- **Matminer** - Descriptores de materiales
+| Libreria | Version | Uso |
+|---|---|---|
+| `torch` | >=2.0 | Framework principal Deep Learning |
+| `torchvision` | >=0.15 | CNN, Transfer Learning |
+| `torch-geometric` | >=2.3 | Redes de grafos (GCN) |
+| `gymnasium` | >=0.29.0 | Reinforcement Learning (DQN) |
+| `scikit-learn` | >=1.3 | ML clasico, MLP baseline |
+| `sympy` | >=1.12 | Algebra simbolica, retropropagacion |
+| `numpy` / `pandas` | latest | Manejo de datos |
+| `matplotlib` / `seaborn` | latest | Visualizacion |
 
-**Para Parte 2 (Redes Neuronales)**:
-- **TensorFlow** o **PyTorch** - Frameworks de Deep Learning
-- **PyTorch Geometric** - GNN para moléculas (opcional)
-- **SHAP** - Interpretabilidad de modelos
+> **Nota**: Este modulo usa **exclusivamente PyTorch**. No se requiere TensorFlow.
+
+### Instalacion de gymnasium (si no esta instalado)
+
+```bash
+pip install "gymnasium>=0.29.0"
+```
 
 ---
 
-## 🚀 Cómo Ejecutar
+## Como Ejecutar
 
 ```bash
 cd educational_content/unit_03_ml_nanomaterials
 
-# Parte 1: ML Fundamentos
+# Secuencia recomendada:
 jupyter lab UNIDAD_3_ML_FUNDAMENTOS.ipynb
-
-# Parte 2: Redes Neuronales
+jupyter lab UNIDAD_3_ML_FUNDAMENTOS_algoritmos_clasicos.ipynb
+jupyter lab UNIDAD_3_REDES_NEURONALES_FUNDAMENTOS.ipynb
 jupyter lab UNIDAD_3_PARTE2_REDES_NEURONALES.ipynb
 ```
 
 ---
 
-## 🎓 Nivel y Duración
+## Dataset
 
-- **Nivel**: Licenciatura avanzada - Posgrado
-- **Prerrequisitos**:
+- **`nanomaterials_full_dataset.csv`**: Dataset principal con propiedades de nanomateriales
+  (tamanio, geometria, composicion, punto de fusion, bandgap, energia de cohesion).
+  Generado sinteticamente con distribuciones fisicamente realistas.
+
+---
+
+## Nivel y Duracion
+
+- **Nivel**: Licenciatura avanzada — Posgrado
+- **Prerequisitos**:
   - Completar Unidades 1 y 2
-  - Álgebra lineal básica
-  - Cálculo diferencial (para gradientes)
-  - Python intermedio (NumPy, Pandas)
-- **Duración estimada**:
-  - Parte 1: 4-5 horas
-  - Parte 2: 5-6 horas
-  - **Total**: 9-11 horas
+  - Algebra lineal (vectores, matrices, valores propios)
+  - Calculo diferencial (gradientes, regla de la cadena)
+  - Python intermedio (NumPy, Pandas, orientado a objetos)
+- **Duracion estimada**:
+  - Notebook 1 (ML Clasico): 3-4 horas
+  - Notebook 2 (Algoritmos): 2-3 horas
+  - Notebook 3 (Fundamentos DL): 5-6 horas
+  - Notebook 4 (Avanzado DL): 3-4 horas
+  - **Total**: 13-17 horas
 
 ---
 
-## 🧪 Conceptos Clave
+## Conceptos Clave
 
-### ML Clásico (Parte 1)
+### ML Clasico
+- **Feature engineering**: descriptores moleculares (fingerprints, Coulomb matrix)
+- **Bias-Variance tradeoff**: underfitting vs overfitting
+- **Cross-validation**: evaluacion robusta con datos experimentales limitados
 
-- **Supervisado**: Aprender mapeo input→output con datos etiquetados
-- **Feature engineering**: Descriptores moleculares (fingerprints, Coulomb matrix)
-- **Bias-Variance tradeoff**: Balance entre underfitting y overfitting
-- **Cross-validation**: Evaluación robusta con datos limitados
-- **Random Forest**: Ensemble de árboles, robusto y explicable
-
-### Redes Neuronales (Parte 2)
-
-- **Retropropagación**: Algoritmo para ajuste de pesos por gradiente
-- **Función de activación**: ReLU, Sigmoid, Tanh y su impacto físico
-- **Dropout**: Regularización para evitar sobreajuste
-- **GNN (Graph Neural Networks)**: Representación natural de moléculas como grafos
-- **Transfer learning**: Reutilizar modelos preentrenados en nuevos dominios
+### Deep Learning (PyTorch)
+- **Retropropagacion**: derivacion simbolica + implementacion en autograd
+- **Funciones de activacion**: ReLU, Sigmoid, Tanh y su impacto en el gradiente
+- **Dropout**: regularizacion estocastica con visualizacion de mascaras
+- **GCN**: representacion natural de moleculas y cristales como grafos
+- **Transfer Learning**: reutilizar MobileNetV2 en imagenes de microscopia
+- **Knowledge Distillation**: comprimir modelos manteniendo el rendimiento
+- **DQN / RL**: aprendizaje por refuerzo para optimizacion de sintesis
 
 ---
 
-## 📚 Referencias Científicas
+## Referencias Cientificas
 
-1. **Goodfellow, Bengio & Courville** (2016). "Deep Learning." MIT Press.
-2. **Géron** (2022). "Hands-On Machine Learning." O'Reilly.
-3. **Duvenaud et al.** (2015). "Convolutional Networks on Graphs for Learning Molecular Fingerprints." *NeurIPS*.
-4. **Schütt et al.** (2017). "SchNet: A continuous-filter convolutional neural network for modeling quantum interactions." *NeurIPS*.
-5. **Brockherde et al.** (2017). "Bypassing the Kohn-Sham equations with machine learning." *Nature Comm.* 8, 872.
-
----
-
-## ✅ Checklist de Aprendizaje
-
-### Parte 1: ML Clásico
-- [ ] Distinguir tipos de aprendizaje automático y cuándo usar cada uno
-- [ ] Calcular y interpretar métricas (RMSE, R², MAE, F1)
-- [ ] Construir pipeline completo: datos → features → modelo → validación
-- [ ] Aplicar Random Forest a predicción de propiedades
-- [ ] Generar e interpretar descriptores moleculares
-
-### Parte 2: Redes Neuronales
-- [ ] Diseñar arquitecturas DNN apropiadas al problema
-- [ ] Entrenar redes con optimización por gradiente descendente
-- [ ] Aplicar técnicas de regularización (Dropout, L2)
-- [ ] Implementar una GNN simple para moléculas
-- [ ] Interpretar predicciones con SHAP values
+1. **Goodfellow, Bengio & Courville** (2016). *Deep Learning.* MIT Press.
+2. **Geron** (2022). *Hands-On Machine Learning.* O'Reilly, 3a ed.
+3. **Kipf & Welling** (2017). "Semi-Supervised Classification with Graph Convolutional Networks." *ICLR*.
+4. **Schutt et al.** (2017). "SchNet: A continuous-filter convolutional neural network." *NeurIPS*.
+5. **Ho et al.** (2020). "Denoising Diffusion Probabilistic Models." *NeurIPS*.
+6. **Hinton et al.** (2015). "Distilling the Knowledge in a Neural Network." *NIPS Workshop*.
+7. **Mnih et al.** (2015). "Human-level control through deep reinforcement learning." *Nature* 518, 529-533.
 
 ---
 
-## 🔄 Conexión con Otras Unidades
+## Checklist de Aprendizaje
 
-**De Unidad 2**: Los descriptores estructurales (RDF, número de coordinación) se usan como features de entrada para los modelos de ML
+### ML Clasico
+- [ ] Distinguir tipos de aprendizaje y elegir el algoritmo apropiado
+- [ ] Calcular e interpretar RMSE, R², MAE, F1-score en contexto de materiales
+- [ ] Construir un pipeline completo: datos -> features -> modelo -> validacion
+- [ ] Comparar Random Forest vs GradientBoosting en datasets de nanomateriales
+- [ ] Aplicar PCA/UMAP para exploracion del espacio de caracteristicas
 
-**Hacia Unidad 4**: Los modelos entrenados aquí se integran con datos experimentales reales
-
----
-
-## 🐛 Troubleshooting
-
-### Error: "No module named 'torch'"
-
-```bash
-conda activate ia_nano
-conda install pytorch torchvision -c pytorch
-```
-
-### Error: "No module named 'matminer'"
-
-```bash
-pip install matminer
-```
-
-### Memoria insuficiente al entrenar
-
-```python
-# Reducir batch_size
-trainer = Trainer(batch_size=16)  # en vez de 64
-
-# O reducir el dataset inicial
-X_train_small = X_train[:1000]
-```
-
-Ver [INSTALL.md](../../INSTALL.md) para más soluciones.
+### Deep Learning
+- [ ] Derivar retropropagacion manualmente con SymPy para una red de 2 capas
+- [ ] Implementar una red MLP en PyTorch con nn.Module
+- [ ] Entrenar una CNN para clasificacion de imagenes de TEM
+- [ ] Aplicar Transfer Learning (feature extraction vs fine-tuning)
+- [ ] Construir un grafo molecular y aplicar GCN
+- [ ] Implementar Knowledge Distillation (temperatura softmax)
+- [ ] Entrenar un agente DQN y visualizar la curva de recompensa
 
 ---
 
-## 🤝 Contribuir
-
-1. Abre un [Issue](https://github.com/ljyudico/Antigravity-Nano-Research-Multiagentic-Core/issues)
-2. Etiqueta con `unit-3` y `educational-content`
-
----
-
-<div align="center">
-  <sub>Machine Learning aplicado a la frontera de la investigación en nanomateriales 🤖🔬</sub>
-</div>
+*Parte del curso **IA y Nanotecnologia** — Antigravity-Nano-Research-Multiagentic-Core*
