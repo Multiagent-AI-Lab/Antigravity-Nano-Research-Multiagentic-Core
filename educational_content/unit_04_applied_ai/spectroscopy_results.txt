@@ -1,0 +1,23 @@
+RESULTADOS DE ANÁLISIS ESPECTRAL
+========================================
+Fecha: 2026-03-30 11:56:10
+
+accuracy: 1.0
+cv_mean: 1.0
+cv_std: 0.0
+n_samples: 750
+n_features: 500
+n_classes: 5
+
+Classification Report:
+              precision    recall  f1-score   support
+
+          Ag       1.00      1.00      1.00        38
+          Au       1.00      1.00      1.00        37
+        AuAg       1.00      1.00      1.00        38
+        AuCu       1.00      1.00      1.00        38
+          Cu       1.00      1.00      1.00        37
+
+    accuracy                           1.00       188
+   macro avg       1.00      1.00      1.00       188
+weighted avg       1.00      1.00      1.00       188

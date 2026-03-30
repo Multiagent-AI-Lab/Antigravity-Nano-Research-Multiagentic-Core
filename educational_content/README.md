@@ -67,17 +67,29 @@ Esta sección contiene material educativo estructurado para aprender **IA aplica
 
 ---
 
+### ✅ Unidad 4: IA Aplicada a Nanotecnología y Datos Experimentales
+**Ruta**: [`unit_04_applied_ai/`](unit_04_applied_ai/)
+
+**Contenido** (2 notebooks):
+- **Parte 1**: IA Aplicada a Propiedades de Materiales
+  - Neural Network Potentials (NNP) con funciones de simetría SOAP
+  - Predicción de bandgap con Random Forest y Gradient Boosting
+  - Optimización Bayesiana y Algoritmos Genéticos
+  - Modelos Generativos (VAE y GANs)
+- **Parte 2**: Análisis de Datos Experimentales
+  - Procesamiento de imágenes SEM/TEM (Watershed, Otsu, U-Net)
+  - Clasificación de espectros UV-Vis de nanopartículas (Au, Ag, Cu)
+  - PCA, t-SNE y detección de anomalías con Isolation Forest
+
+**Nivel**: Licenciatura avanzada — Posgrado
+**Duración estimada**: 9-13 horas (ambas partes)
+**Prerrequisitos**: Unidades 1, 2 y 3
+
+[📓 Ir a la Unidad 4](unit_04_applied_ai/)
+
+---
+
 ## 🚧 Próximas Unidades (En Desarrollo)
-
-### Unidad 4: IA Aplicada a Datos Experimentales
-- Fundamentos de ML
-- Redes neuronales aplicadas
-- Predicción de propiedades
-
-### Unidad 4: IA Aplicada a Datos Experimentales
-- Integración de datos reales
-- Validación experimental
-- Análisis de resultados
 
 ### Unidad 5: Sistemas Multi-Agente e IA Generativa
 - Arquitecturas multi-agente
@@ -147,7 +159,7 @@ Cada unidad sigue el **Gold Standard** definido en [GOVERNANCE.md](../GOVERNANCE
 | 1. Modelado Nanoescala | ✅ Disponible | ✅ |
 | 2. Simulación Molecular | ✅ Disponible | ✅✅ (2 notebooks) |
 | 3. ML Fundamentos | ✅ Disponible | ✅✅ (2 notebooks) |
-| 4. IA Aplicada | 🚧 En desarrollo | - |
+| 4. IA Aplicada | ✅ Disponible | ✅✅ (2 notebooks) |
 | 5. Multi-Agente | 🚧 En desarrollo | - |
 | 6. Proyecto Final | 🚧 En desarrollo | - |
 | 7. Computación Profesional | 🚧 En desarrollo | - |

@@ -1,0 +1,26 @@
+ESTADÍSTICAS DE ÓXIDOS METÁLICOS
+==================================================
+
+Fecha de descarga: 2026-03-30 11:35:33
+Total de materiales: 500
+
+ESTADÍSTICAS DESCRIPTIVAS:
+          bandgap  formation_energy   stability     density       volume
+count  500.000000        500.000000  500.000000  500.000000   500.000000
+mean     1.361381         -2.173215    0.134899    5.121828   431.361928
+std      1.626287          0.907869    0.341579    2.048539   417.886128
+min      0.000000         -4.263527    0.000000    0.239216    28.894862
+25%      0.000000         -2.785780    0.002869    3.628948   176.371216
+50%      0.637850         -2.123262    0.045661    4.700438   287.062690
+75%      2.369450         -1.565796    0.119600    6.561727   530.485206
+max      6.640400          2.020064    4.584749   11.170295  2963.928883
+
+DISTRIBUCIÓN POR SISTEMA CRISTALINO:
+crystal_system
+Monoclinic      142
+Orthorhombic    120
+Triclinic        88
+Trigonal         43
+Cubic            42
+Tetragonal       42
+Hexagonal        23
