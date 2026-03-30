@@ -18,9 +18,19 @@ dependencies:
   - openmm
   - mendeleev
   - pip
+  - sympy
+  - networkx
+  - plotly
+  - ipywidgets
+  - tqdm
+  - python-dotenv
   - pip:
+    - scikit-learn>=1.3.0,<2.0.0
+    - scikit-image>=0.21.0      # Unidad 4: procesamiento microscopía SEM/TEM
+    - mp_api>=0.46.0            # Unidad 4: Materials Project API
     - pycaret>=3.3.0
     - torch>=2.0.0
     - torchvision>=0.15.0
     - torchaudio>=2.0.0
     - gymnasium>=0.29.0
+    - joblib>=1.3.0,<2.0.0

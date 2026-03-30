@@ -93,6 +93,11 @@ mp_config.json
 
 # Generated plots (auto-created by notebooks)
 educational_content/unit_03_ml_nanomaterials/*.png
+educational_content/unit_04_applied_ai/*.png
+
+# Generated data files (auto-created by notebooks)
+educational_content/unit_04_applied_ai/*.csv
+educational_content/unit_04_applied_ai/*.txt
 
 # Large downloaded datasets
 educational_content/unit_03_ml_nanomaterials/data/MNIST/

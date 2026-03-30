@@ -1,8 +1,9 @@
 # =============================================================================
 # REQUIREMENTS.TXT - Curso IA Nanotecnología
-# Actualizado: 2026-02-02
+# Actualizado: 2026-03-30
 # Incluye todas las dependencias de Unidades 1-7 y Capítulos Avanzados
 # =============================================================================
+# Unidad 4 (IA Aplicada): ase, mp_api, scikit-image, scikit-learn ya incluidos
 
 # --- CORE SCIENTIFIC STACK ---
 numpy>=1.24.0
@@ -23,6 +24,16 @@ gymnasium>=0.29.0         # Entornos RL (CartPole, etc.) — Unidad 3
 ase>=3.22.0               # Atomic Simulation Environment (Unidades 1-2)
 mendeleev>=0.9.0          # Propiedades de elementos químicos
 networkx>=3.0             # Graph theory para estructuras moleculares
+mp_api>=0.46.0            # Materials Project API (Unidad 4)
+
+# --- COMPUTER VISION & IMAGE ANALYSIS ---
+scikit-image>=0.21.0      # Procesamiento de imágenes (Unidad 4 — Microscopía)
+
+# --- DEEP LEARNING ---
+# tensorflow — solo necesario si se activa el entrenamiento real de U-Net.
+# El código de Unidad 4 usa numpy-only U-Net (sin GPU requerida).
+# Instalar manualmente si se necesita: pip install tensorflow>=2.13.0,<2.17.0
+# NOTA Windows: requiere Microsoft C++ Redistributable 2019 x64.
 
 # --- VISUALIZATION ---
 pydot>=1.4.2
