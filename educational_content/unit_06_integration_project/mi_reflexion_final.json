@@ -1,0 +1,39 @@
+{
+  "fecha": "2026-04-03",
+  "reflexion": {
+    "concepto_mas_valioso": "\n    [Cual fue el concepto o herramienta del curso que mas valor aportara a tu trabajo?]\n    ",
+    "momento_aha": "\n    [Describe un momento en que algo de repente 'hizo clic'. \n     Puede ser un error que entendiste, un resultado inesperado, o una conexion entre conceptos.]\n    ",
+    "mayor_dificultad": "\n    [Que fue lo mas dificil del curso para ti? Como lo superaste?]\n    ",
+    "orgullo_del_proyecto": "\n    [De que aspecto de tu proyecto te sientes mas orgulloso?]\n    ",
+    "si_empezara_de_nuevo": "\n    [Si pudieras volver al inicio de tu proyecto, que harias diferente?]\n    ",
+    "proxima_habilidad": "\n    [Cual es la prioridad numero 1 en tu desarrollo profesional despues de este curso?]\n    ",
+    "aplicacion_real": "\n    [Como planeas aplicar lo aprendido en tu carrera o investigacion?]\n    ",
+    "consejo_para_futuros_estudiantes": "\n    [Que consejo le darias a los estudiantes que tomaran este curso el proximo semestre?]\n    "
+  },
+  "mapa_habilidades": {
+    "Modelado atomistico (ASE)": 0,
+    "Dinamica Molecular": 0,
+    "Descriptores moleculares": 0,
+    "ML clasico (sklearn)": 0,
+    "Redes neuronales (PyTorch)": 0,
+    "Optimizacion Bayesiana": 0,
+    "LLMs y prompting": 0,
+    "Embeddings y busqueda semantica": 0,
+    "Agentes ReAct (LangChain)": 0,
+    "Multi-agente (CrewAI)": 0,
+    "RAG": 0,
+    "Memoria de agentes": 0,
+    "FastAPI / despliegue": 0,
+    "Testing (pytest)": 0,
+    "Git / control de versiones": 0
+  },
+  "portafolio": {
+    "Notebooks ejecutables de U1-U6 en GitHub": false,
+    "README del repositorio con descripcion del curso": false,
+    "Proyecto integrador en repositorio propio": false,
+    "API desplegada (Render, Railway o similar)": false,
+    "Visualizaciones de resultados del proyecto": false,
+    "Publicacion o post sobre el proyecto (LinkedIn, blog)": false,
+    "Contribucion a un proyecto open-source de materiales": false
+  }
+}

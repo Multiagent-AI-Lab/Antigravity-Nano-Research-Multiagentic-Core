@@ -1,0 +1,32 @@
+{
+  "nombre": "...",
+  "fecha": "2026-...",
+  "titulo": "\n    [ESCRIBE EL TITULO DE TU PROYECTO AQUI]\n    ",
+  "pregunta_de_investigacion": "\n    [ESCRIBE UNA PREGUNTA ESPECIFICA Y RESPONDIBLE]\n    Ejemplo: '¿Cual es el tamano optimo de nanoparticulas de ZnO\n    para maximizar la degradacion de azul de metileno bajo luz UV?'\n    ",
+  "justificacion": "\n    [Por que es importante este problema? 2-4 oraciones]\n    ",
+  "dominio": "A",
+  "fuente_de_datos": "\n    [De donde vendran tus datos?]\n    Opciones: dataset del curso (nanoparticles_dataset.csv),\n              Materials Project API, datos sinteticos generados,\n              dataset publico (indicar URL), simulaciones ASE, otro.\n    ",
+  "n_muestras_estimado": 0,
+  "herramientas_a_usar": {
+    "U1_modelado_atomistico": false,
+    "U2_simulacion_MD_DFT": false,
+    "U3_ml_clasico": false,
+    "U3_redes_neuronales": false,
+    "U4_llms_generativa": false,
+    "U4_analisis_datos_exp": false,
+    "U5_agentes_langchain": false,
+    "U5_multiagente_crewai": false,
+    "U5_rag_memoria": false,
+    "U6_api_fastapi": false
+  },
+  "pasos_del_proyecto": [
+    "1. ...",
+    "2. ...",
+    "3. ...",
+    "4. ...",
+    "5. ..."
+  ],
+  "resultado_principal": "\n    [Que producira tu proyecto? Un modelo, un diseno optimo,\n     una API, un dataset anotado, etc.]\n    ",
+  "metrica_de_exito": "\n    [Como sabras que tu proyecto funciono bien?]\n    Ejemplo: 'R² > 0.80 en prediccion de band gap' o\n             'precision > 85% en clasificacion de morfologia'\n    ",
+  "riesgo_principal": "\n    [Cual es el mayor riesgo de tu proyecto y como lo mitigas?]\n    Ejemplo: 'Si no hay suficientes datos, generare datos sinteticos\n    con el modelo fisico de U2'\n    "
+}

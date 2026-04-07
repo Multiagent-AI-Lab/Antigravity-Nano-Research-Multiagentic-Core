@@ -1,0 +1,23 @@
+{
+  "titulo": "[ESCRIBE EL TITULO DE TU PROYECTO AQUI]",
+  "autor": "...",
+  "fecha": "2026-04-03",
+  "pregunta": "[ESCRIBE UNA PREGUNTA ESPECIFICA Y RESPONDIBLE]\n    Ejemplo: '¿Cual es el tamano optimo de nanoparticulas de ZnO\n    para maximizar la degradacion de azul de metileno bajo luz UV?'",
+  "metodologia": "[ESTUDIANTE: Documenta tu metodologia.]\n\nGuia:\n- Datos: fuente, tamano del dataset, variables, preprocesamiento\n- Modelo(s): nombre, arquitectura/parametros clave\n- Evaluacion: metrica elegida, division train/test, validacion cruzada\n- Herramientas de U1-U5 usadas y como se conectan en el pipeline",
+  "resultados": {
+    "metrica": "",
+    "valor": null,
+    "notas": ""
+  },
+  "conclusiones": "[ESTUDIANTE: Escribe 3-5 conclusiones concretas.]\n\nCada conclusion debe ser una oracion afirmativa y especifica.\nEjemplo: 'El modelo Random Forest predice el band gap con R²=0.87,\nsuperando el baseline lineal (R²=0.60) en el dataset de oxidos.'",
+  "autoevaluacion": {
+    "score_ponderado": 0.0,
+    "detalle": {
+      "Planteamiento del problema": 0,
+      "Integracion de herramientas": 0,
+      "Implementacion funcional": 0,
+      "Analisis e interpretacion": 0,
+      "Comunicacion cientifica": 0
+    }
+  }
+}

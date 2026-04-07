@@ -1,0 +1,22 @@
+{
+  "propuesta_titulo": "\n    [ESCRIBE EL TITULO DE TU PROYECTO AQUI]\n    ",
+  "herramientas_seleccionadas": [],
+  "pipeline": [
+    {
+      "etapa": "Etapa 1",
+      "descripcion": "...",
+      "herramienta": "..."
+    },
+    {
+      "etapa": "Etapa 2",
+      "descripcion": "...",
+      "herramienta": "..."
+    },
+    {
+      "etapa": "Etapa 3",
+      "descripcion": "...",
+      "herramienta": "..."
+    }
+  ],
+  "pipeline_completo": false
+}
