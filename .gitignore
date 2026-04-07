@@ -94,10 +94,18 @@ mp_config.json
 # Generated plots (auto-created by notebooks)
 educational_content/unit_03_ml_nanomaterials/*.png
 educational_content/unit_04_applied_ai/*.png
+educational_content/unit_05_multi_agent_sys/*.png
 
 # Generated data files (auto-created by notebooks)
 educational_content/unit_04_applied_ai/*.csv
 educational_content/unit_04_applied_ai/*.txt
+
+# Unit 05 — generated/runtime files (not for publication)
+educational_content/unit_05_multi_agent_sys/chroma_u5_05/
+educational_content/unit_05_multi_agent_sys/llm_cache/
+educational_content/unit_05_multi_agent_sys/__pycache__/
+educational_content/unit_05_multi_agent_sys/PLAN_ACTUALIZACION_UNIDAD_5.md
+educational_content/unit_05_multi_agent_sys/PROTOCOLO_UNIDAD_5_MULTIAGENTE.md
 
 # Large downloaded datasets
 educational_content/unit_03_ml_nanomaterials/data/MNIST/
