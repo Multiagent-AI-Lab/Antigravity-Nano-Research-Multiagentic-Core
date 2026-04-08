@@ -1,23 +1,22 @@
 # Antigravity Nano Research Multiagentic Core
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Requires Antigravity](https://img.shields.io/badge/Requires-Antigravity-purple.svg)](https://github.com/google-deepmind/antigravity)
+[![Built with Antigravity](https://img.shields.io/badge/Built%20with-Antigravity-purple.svg)](https://github.com/google-deepmind/antigravity)
 [![Python 3.11](https://img.shields.io/badge/Python-3.11-green.svg)](https://www.python.org/downloads/)
+[![Author](https://img.shields.io/badge/Author-ljyudico-blue.svg)](https://github.com/ljyudico)
 
-> **Sistema Multi-Agente para Investigación en Nanotecnología e Inteligencia Artificial**
+> **Curso de IA Aplicada a Investigación Científica y Tecnológica — Nanotecnología**
 
-Este repositorio contiene la infraestructura base para desarrollar **Investigación de Primer Nivel** en IA aplicada a Nanotecnología usando **Antigravity** como entorno de desarrollo multi-agente.
+Desarrollado por **[@ljyudico](https://github.com/ljyudico)** usando [Antigravity](https://github.com/google-deepmind/antigravity) como entorno de desarrollo multi-agente. Este repositorio contiene el material educativo completo (Unidades 1–6) para aprender IA aplicada a nanotecnología, desde simulación molecular hasta sistemas multi-agente y despliegue de modelos.
 
 ---
 
 ## 🚀 Quick Start (3 Pasos)
 
-> [!IMPORTANT]
-> **Requisito Previo**: Debes tener [Antigravity](https://github.com/google-deepmind/antigravity) instalado y configurado.
+> [!NOTE]
+> Este repositorio fue desarrollado usando [Antigravity](https://github.com/google-deepmind/antigravity) como entorno de trabajo. **No necesitas Antigravity** para ejecutar los notebooks — solo conda y las dependencias del entorno `ia_nano`.
 
 ### 1. Clonar el Repositorio
-
-Desde Antigravity, navega a tu directorio de proyectos y clona:
 
 ```bash
 git clone https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core.git
@@ -89,13 +88,13 @@ flowchart LR
 
 ### Obligatorios
 
-- **[Antigravity](https://github.com/google-deepmind/antigravity)** - Entorno de desarrollo multi-agente
 - **Python 3.11** - [¿Por qué 3.11?](#por-qué-python-311)
 - **Conda/Miniconda** - Gestor de ambientes
 - **Git** - Control de versiones
 
 ### Opcionales
 
+- **[Antigravity](https://github.com/google-deepmind/antigravity)** - Entorno multi-agente usado durante el desarrollo (no requerido para ejecutar los notebooks)
 - **Node.js** - Para MCP servers (Materials Project integration)
 - **CUDA** - Para aceleración GPU en OpenMM
 
