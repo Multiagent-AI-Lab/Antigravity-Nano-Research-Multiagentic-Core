@@ -112,6 +112,9 @@ educational_content/unit_05_multi_agent_sys/PROTOCOLO_UNIDAD_5_MULTIAGENTE.md
 # Large downloaded datasets
 educational_content/unit_03_ml_nanomaterials/data/MNIST/
 
+# Unit 05 — sensitive/local files (not for publication)
+educational_content/unit_05_multi_agent_sys/.env.example
+
 # Unit 06 — generated/runtime files (not for publication)
 educational_content/unit_06_integration_project/.env.example
 educational_content/unit_06_integration_project/requirements.txt
