@@ -18,10 +18,10 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install core dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pytest pytest-asyncio numpy scikit-learn
+          pip install -e ".[dev]"
 
       - name: Run tests
         run: pytest tests/ -v --tb=short

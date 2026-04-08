@@ -7,12 +7,16 @@ No API keys or external services required.
 import sys
 import os
 import pytest
+import re
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if ROOT not in sys.path:
     sys.path.insert(0, ROOT)
 
 from external_skills.agent_warmup import context_loader
+from external_skills.ai_mining import toxicity_predictor
+from external_skills.orchestration import librarian_rag
+from external_skills.pedagogy import socratic_debugger
 from external_skills.routing import task_classifier
 from external_skills.evaluation import output_scorer
 from external_skills.numerical import stability_guardian, basis_set_architect
@@ -275,3 +279,88 @@ class TestRegistry:
     def test_load_unknown_skill_raises(self):
         with pytest.raises((KeyError, ValueError)):
             registry.load_skill("skill_que_no_existe")
+
+
+# ── toxicity_predictor ───────────────────────────────────────────────────────
+
+class TestToxicityPredictor:
+    def test_toxic_compound_detected(self):
+        result = toxicity_predictor.predict_toxicity("HgCl2")
+        assert result["is_toxic"] is True
+        assert result["toxicity_score"] > 0.5
+        assert len(result["mechanisms"]) > 0
+
+    def test_non_toxic_compound(self):
+        result = toxicity_predictor.predict_toxicity("H2O")
+        assert result["is_toxic"] is False
+        assert result["toxicity_score"] < 0.5
+        assert result["mechanisms"] == []
+
+    def test_lead_is_toxic(self):
+        result = toxicity_predictor.predict_toxicity("PbSO4")
+        assert result["is_toxic"] is True
+
+    def test_returns_confidence(self):
+        result = toxicity_predictor.predict_toxicity("AsCl3")
+        assert "confidence" in result
+        assert isinstance(result["confidence"], str)
+
+    def test_returns_required_keys(self):
+        result = toxicity_predictor.predict_toxicity("C6H6")
+        for key in ("is_toxic", "toxicity_score", "confidence", "mechanisms"):
+            assert key in result
+
+
+# ── librarian_rag ────────────────────────────────────────────────────────────
+
+class TestLibrarianRag:
+    def test_known_compound_returns_data(self):
+        result = librarian_rag.fetch_properties("Au")
+        assert "bandgap" in result
+        assert "structure" in result
+        assert result["source"] == "Materials Project (Verified)"
+
+    def test_silicon_properties(self):
+        result = librarian_rag.fetch_properties("Si")
+        assert result["bandgap"] == 1.12
+        assert result["structure"] == "Diamond"
+
+    def test_unknown_compound_returns_error(self):
+        result = librarian_rag.fetch_properties("CompuestoInexistente")
+        assert "error" in result
+
+    def test_tio2_is_in_db(self):
+        result = librarian_rag.fetch_properties("TiO2")
+        assert "bandgap" in result
+        assert result["bandgap"] == 3.2
+
+    def test_graphene_melting_point(self):
+        result = librarian_rag.fetch_properties("Graphene")
+        assert result["melting_point"] == 4510
+
+
+# ── socratic_debugger ────────────────────────────────────────────────────────
+
+class TestSocraticDebugger:
+    def test_returns_string(self):
+        result = socratic_debugger.diagnose_error("ValueError: negative kinetic energy")
+        assert isinstance(result, str)
+        assert len(result) > 10
+
+    def test_kinetic_energy_error(self):
+        result = socratic_debugger.diagnose_error("negative kinetic energy detected")
+        assert "kinetic" in result.lower() or "?" in result
+
+    def test_zero_division_error(self):
+        result = socratic_debugger.diagnose_error("ZeroDivisionError: division by zero")
+        assert "?" in result or len(result) > 20
+
+    def test_name_error(self):
+        result = socratic_debugger.diagnose_error("NameError: name 'x' is not defined")
+        assert isinstance(result, str)
+        assert len(result) > 0
+
+    def test_generic_error_fallback(self):
+        result = socratic_debugger.diagnose_error("SomeObscureError: unknown issue")
+        assert "SomeObscureError" in result or "?" in result
+
