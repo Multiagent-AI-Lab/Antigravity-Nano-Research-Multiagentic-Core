@@ -126,3 +126,14 @@ project_memory.md
 logs.log
 remove_output.txt
 remove_badges_u1_u2.py
+
+# Development/maintenance scripts (one-off fixes, not part of the course)
+fix_*.py
+parse_nb.py
+inspect_u6.py
+analyze_u506.py
+fix_u6_output.txt
+u6_04_cell5.txt
+u6_cells.txt
+u6_map.txt
+tmp/

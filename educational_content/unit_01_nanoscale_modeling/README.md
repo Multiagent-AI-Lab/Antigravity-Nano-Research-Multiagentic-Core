@@ -1,219 +1,89 @@
-# Unidad 1: Modelado a Nanoescala
+# Unidad 1 — Modelado a Nanoescala
 
-**Fundamentos de Simulación Molecular y Análisis de Nanoestructuras**
-
----
-
-## 🎯 Objetivos de Aprendizaje
-
-Al completar esta unidad, serás capaz de:
-
-1. ✅ Comprender los fundamentos de la simulación molecular a nanoescala
-2. ✅ Utilizar **ASE (Atomic Simulation Environment)** para crear y manipular estructuras atómicas
-3. ✅ Optimizar geometrías de nanopartículas usando algoritmos de minimización
-4. ✅ Analizar propiedades estructurales (RDF, coordinación, energías)
-5. ✅ Visualizar estructuras 3D interactivas con NGLView
-6. ✅ Interpretar resultados desde una perspectiva física y química
+**Curso:** IA Aplicada a Investigacion Cientifica y Tecnologica  
+**Repositorio:** [Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core)
 
 ---
 
-## 📋 Contenido del Notebook
+## Proposito
 
-### Parte 1: Fundamentos Teóricos
-- ¿Qué es la nanoescala?
-- Importancia de la simulación computacional
-- Potenciales interatómicos (Lennard-Jones, EAM)
-
-### Parte 2: Atomic Simulation Environment (ASE)
-- Instalación y configuración
-- Creación de estructuras cristalinas
-- Manipulación de átomos y moléculas
-
-### Parte 3: Optimización de Estructuras
-- Algoritmos de minimización (BFGS, FIRE)
-- Criterios de convergencia
-- Análisis de energías
-
-### Parte 4: Nanopartículas de Oro
-- Construcción de clusters Au₁₃, Au₅₅, Au₁₄₇
-- Optimización geométrica
-- Análisis de estabilidad
-
-### Parte 5: Análisis Estructural
-- Función de Distribución Radial (RDF)
-- Número de coordinación
-- Visualización 3D interactiva
-
-### Parte 6: Interpretación Física
-- Relación estructura-propiedades
-- Efectos de tamaño cuántico
-- Aplicaciones en catálisis y plasmónica
+Esta unidad introduce los **fundamentos de simulacion molecular a nanoescala** usando Python.
+El estudiante aprende a crear estructuras atomicas, optimizar geometrias y analizar propiedades
+estructurales, sentando las bases computacionales y fisicas para las unidades siguientes.
 
 ---
 
-## 🛠️ Requisitos Técnicos
+## Notebooks
 
-### Ambiente Conda
+| Archivo | Contenido principal |
+|---------|---------------------|
+| `UNIDAD_1_MODELADO_NANOESCALA.ipynb` | ASE, potenciales interatomicos, optimizacion de nanoparticulas Au, RDF, visualizacion 3D |
 
-Este notebook requiere el ambiente `ia_nano` configurado:
+---
+
+## Temas cubiertos
+
+- Nanoescala 1-100 nm: propiedades emergentes
+- Atomic Simulation Environment (ASE): creacion y manipulacion de estructuras atomicas
+- Potenciales interatomicos: Lennard-Jones y EAM (Embedded Atom Method)
+- Optimizacion geometrica: BFGS y FIRE, criterios de convergencia
+- Nanoparticulas de oro: construccion de clusters Au13, Au55, Au147
+- Analisis estructural: Funcion de Distribucion Radial (RDF), numero de coordinacion
+- Visualizacion 3D interactiva con NGLView
+- Relacion estructura-propiedades: catalisis, plasmonica, efectos de tamano cuantico
+
+---
+
+## Stack tecnologico
+
+| Herramienta | Uso |
+|-------------|-----|
+| ASE | Creacion, optimizacion y analisis de estructuras atomicas |
+| NumPy / SciPy | Calculos numericos y optimizacion |
+| Matplotlib | Visualizacion 2D (RDF, energias) |
+| NGLView | Visualizacion 3D interactiva de estructuras moleculares |
+
+---
+
+## Prerrequisitos
+
+- Python basico (listas, funciones, numpy arrays)
+- Quimica general (estructura atomica, enlaces)
+- Conceptos basicos de mecanica cuantica (no obligatorio)
+- Nivel: ultimos semestres licenciatura / posgrado
+- Duracion estimada: 4-6 horas
+
+---
+
+## Instalacion
 
 ```bash
-# Desde el directorio raíz del repositorio
+git clone https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core
+cd Antigravity-Nano-Research-Multiagentic-Core
+conda env create -f environment.yml
 conda activate ia_nano
+jupyter lab educational_content/unit_01_nanoscale_modeling/UNIDAD_1_MODELADO_NANOESCALA.ipynb
 ```
 
-### Dependencias Principales
+---
 
-- **ASE** (Atomic Simulation Environment) - Simulación molecular
-- **NumPy** - Cálculos numéricos
-- **Matplotlib** - Visualización 2D
-- **NGLView** - Visualización 3D interactiva
-- **SciPy** - Optimización
+## Archivos generados durante la ejecucion
 
-Todas las dependencias se instalan automáticamente con `setup.sh` / `setup.bat`.
+El notebook crea automaticamente:
+- `Au13_opt.traj`, `Au_cluster_*.xyz` — trayectorias y estructuras optimizadas
+- Graficos de RDF y analisis comparativo de nanoparticulas
+
+Estos archivos estan excluidos del repositorio via `.gitignore`.
 
 ---
 
-## 🚀 Cómo Ejecutar
+## Relacion con otras unidades
 
-### Opción 1: Jupyter Lab (Recomendado)
-
-```bash
-cd educational_content/unit_01_nanoscale_modeling
-jupyter lab UNIDAD_1_MODELADO_NANOESCALA.ipynb
-```
-
-### Opción 2: Jupyter Notebook
-
-```bash
-cd educational_content/unit_01_nanoscale_modeling
-jupyter notebook UNIDAD_1_MODELADO_NANOESCALA.ipynb
-```
-
-### Opción 3: VS Code
-
-1. Abre el notebook en VS Code
-2. Selecciona el kernel `ia_nano`
-3. Ejecuta las celdas secuencialmente
+- **Unidad 1** (esta) -> estructuras estaticas, optimizacion geometrica
+- **Unidad 2** -> dinamica molecular y DFT: estructuras en movimiento y propiedades electronicas
+- **Unidad 3** -> ML sobre los datos generados en U1 y U2
 
 ---
 
-## 📊 Datos y Assets
-
-### Archivos Generados
-
-Durante la ejecución del notebook se generarán:
-
-- `Au13_opt.traj` - Trayectoria de optimización Au₁₃
-- `Au_cluster_*.xyz` - Estructuras optimizadas
-- `rdf_Au_nanoparticula.png` - Gráfico de RDF
-- `analisis_nanoparticulas_Au.png` - Análisis comparativo
-
-Estos archivos se guardan en el directorio `assets/` (creado automáticamente).
-
----
-
-## 🎓 Nivel y Duración
-
-- **Nivel**: Licenciatura (últimos semestres) - Posgrado
-- **Prerrequisitos**: 
-  - Python básico
-  - Química general
-  - Conceptos de mecánica cuántica (básicos)
-- **Duración estimada**: 4-6 horas
-- **Formato**: Autoguiado con explicaciones detalladas
-
----
-
-## 🧪 Conceptos Clave
-
-### Física y Química
-
-- **Nanoescala**: 1-100 nm, donde emergen propiedades cuánticas
-- **Potencial de Lennard-Jones**: Modelo de interacciones van der Waals
-- **EAM (Embedded Atom Method)**: Potencial para metales
-- **RDF (Radial Distribution Function)**: Describe orden estructural
-- **Número de coordinación**: Átomos vecinos más cercanos
-
-### Computacional
-
-- **ASE**: Framework Python para simulaciones atómicas
-- **Optimización geométrica**: Minimización de energía potencial
-- **BFGS**: Algoritmo quasi-Newton para optimización
-- **Visualización molecular**: NGLView para estructuras 3D
-
----
-
-## 📚 Referencias Científicas
-
-1. **ASE Documentation**: https://wiki.fysik.dtu.dk/ase/
-2. Larsen et al. (2017). "The atomic simulation environment—a Python library for working with atoms." *J. Phys.: Condens. Matter* 29, 273002.
-3. Baletto & Ferrando (2005). "Structural properties of nanoclusters." *Rev. Mod. Phys.* 77, 371.
-4. Daniel & Astruc (2004). "Gold nanoparticles: assembly, supramolecular chemistry, quantum-size-related properties." *Chem. Rev.* 104, 293.
-
----
-
-## ✅ Checklist de Aprendizaje
-
-Después de completar esta unidad, deberías poder:
-
-- [ ] Explicar qué hace especial a la nanoescala
-- [ ] Crear estructuras atómicas usando ASE
-- [ ] Optimizar geometrías de nanopartículas
-- [ ] Calcular e interpretar RDF
-- [ ] Visualizar estructuras 3D interactivas
-- [ ] Relacionar estructura con propiedades físicas
-- [ ] Escribir código Python para simulaciones básicas
-
----
-
-## 🔄 Próximos Pasos
-
-Una vez completada esta unidad, continúa con:
-
-**Unidad 2: Simulación Molecular Avanzada**
-- Dinámica Molecular (MD)
-- Teoría del Funcional de la Densidad (DFT)
-- Nanofabricación computacional
-
----
-
-## 🐛 Troubleshooting
-
-### Error: "No module named 'ase'"
-
-```bash
-conda activate ia_nano
-conda install -c conda-forge ase
-```
-
-### Visualización 3D no funciona
-
-```bash
-# Habilitar extensión de Jupyter
-jupyter nbextension enable --py --sys-prefix nglview
-```
-
-### Kernel no aparece en Jupyter
-
-```bash
-python -m ipykernel install --user --name=ia_nano
-```
-
-Ver [INSTALL.md](../../INSTALL.md) para más soluciones.
-
----
-
-## 🤝 Contribuir
-
-¿Encontraste un error o tienes sugerencias para mejorar esta unidad?
-
-1. Abre un [Issue](https://github.com/ljyudico/Antigravity-Nano-Research-Multiagentic-Core/issues)
-2. Usa el template "Bug Report" o "Feature Request"
-3. Etiqueta con `unit-1` y `educational-content`
-
----
-
-<div align="center">
-  <sub>Unidad desarrollada siguiendo el Gold Standard de calidad pedagógica 📖</sub>
-</div>
+*Ultima actualizacion: abril 2026*  
+*Antigravity-Nano-Research — Unit 01 Nanoscale Modeling*

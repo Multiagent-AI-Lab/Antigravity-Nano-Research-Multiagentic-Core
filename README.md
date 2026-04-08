@@ -20,7 +20,7 @@ Este repositorio contiene la infraestructura base para desarrollar **Investigaci
 Desde Antigravity, navega a tu directorio de proyectos y clona:
 
 ```bash
-git clone https://github.com/ljyudico/Antigravity-Nano-Research-Multiagentic-Core.git
+git clone https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core.git
 cd Antigravity-Nano-Research-Multiagentic-Core
 ```
 
@@ -149,17 +149,31 @@ Este repositorio incluye **material educativo estructurado** para aprender IA ap
 - Nanofabricación computacional
 - **[📓 Ir a la Unidad 2](educational_content/unit_02_molecular_simulation/)**
 
-### ✅ Unidad 3: Machine Learning para Nanomateriales (2 notebooks)
-- Algoritmos clásicos (Random Forest, SVM, regresión)
-- Redes neuronales y Graph Neural Networks para moléculas
+### ✅ Unidad 3: Machine Learning para Nanomateriales (4 notebooks)
+- Algoritmos clásicos (Random Forest, SVM, regresión, Gradient Boosting)
+- Redes neuronales profundas en PyTorch (backpropagación simbólica, GCN)
+- Transfer Learning, Knowledge Distillation, Reinforcement Learning (DQN)
 - Feature engineering y descriptores moleculares
 - **[📓 Ir a la Unidad 3](educational_content/unit_03_ml_nanomaterials/)**
 
-### 🚧 Próximas Unidades
-- Unidad 4: IA Aplicada a Datos Experimentales
-- Unidad 5: Sistemas Multi-Agente
-- Unidad 6: Proyecto de Integración
-- Unidad 7: Computación Científica Profesional
+### ✅ Unidad 4: IA Aplicada a Nanotecnología (2 notebooks)
+- LLMs y Generative AI para ciencia de materiales (Materials Project API)
+- Computer Vision para microscopía SEM/TEM
+- Análisis espectroscópico y series temporales con IA
+- Optimización bayesiana y algoritmos evolutivos
+- **[📓 Ir a la Unidad 4](educational_content/unit_04_applied_ai/)**
+
+### ✅ Unidad 5: Sistemas Multi-Agente (9 notebooks)
+- LangChain, LangGraph, CrewAI, Google ADK 1.0 + protocolo A2A
+- RAG, GraphRAG, Mem0, ChromaDB
+- Producción: FastAPI, observabilidad, model routing multi-proveedor
+- **[📓 Ir a la Unidad 5](educational_content/unit_05_multi_agent_sys/)**
+
+### ✅ Unidad 6: Proyecto Integrador (6 notebooks)
+- Pipeline de proyecto científico end-to-end (propuesta → implementación → despliegue → evaluación)
+- FastAPI template (`mi_proyecto_api/`) con Dockerfile listo para adaptar
+- Scaffolding guiado: JSON de propuesta, plan técnico y reporte final
+- **[📓 Ir a la Unidad 6](educational_content/unit_06_integration_project/)**
 
 **[📚 Ver todo el contenido educativo](educational_content/)**
 
