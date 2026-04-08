@@ -90,6 +90,8 @@ mp_config.json
 # Model artifacts (generated during training)
 *.pth
 *.pkl
+*.onnx
+*.onnx.data
 
 # Generated plots (auto-created by notebooks)
 educational_content/unit_03_ml_nanomaterials/*.png

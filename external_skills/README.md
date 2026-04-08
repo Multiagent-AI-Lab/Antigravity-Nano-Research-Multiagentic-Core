@@ -4,187 +4,126 @@ Este directorio contiene **skills modulares** desarrolladas específicamente par
 
 ---
 
-## 📁 Estructura
+## Estructura
 
 ```
 external_skills/
-├── __init__.py                 # Inicialización del paquete
-├── numerical/                  # Skills de validación numérica
-│   ├── stability_guardian.py   # Validador de timesteps MD
-│   └── basis_set_architect.py  # Recomendador de bases DFT
-├── ai_mining/                  # Skills de AI/ML
-│   └── toxicity_predictor.py   # Predictor de toxicidad
-├── pedagogy/                   # Skills pedagógicas
-│   └── socratic_debugger.py    # Generador de feedback Socrático
-└── orchestration/              # Skills de orquestación
-    └── librarian_rag.py        # RAG para validación experimental
+├── __init__.py                      # Inicialización del paquete
+├── registry.py                      # Registro central de skills (load_skill, discover_skills)
+├── agent_warmup/
+│   └── context_loader.py            # Inyecta contexto de dominio en agentes LLM
+├── ai_mining/
+│   └── toxicity_predictor.py        # Predictor de toxicidad de nanomateriales
+├── apis/
+│   ├── github_skill_loader.py       # Carga skills desde repositorios GitHub
+│   └── token_budget_guard.py        # Control de presupuesto de tokens
+├── evaluation/
+│   └── output_scorer.py             # Evaluación de salidas de agentes
+├── memory/
+│   ├── episodic_retriever.py        # Recuperación de memoria episódica
+│   └── graph_memory.py              # Memoria en grafo de conocimiento
+├── numerical/
+│   ├── stability_guardian.py        # Validador de timesteps MD
+│   └── basis_set_architect.py       # Recomendador de bases DFT
+├── observability/
+│   └── trace_annotator.py           # Anotación de trazas de agentes
+├── orchestration/
+│   └── librarian_rag.py             # RAG para validación experimental
+├── pedagogy/
+│   └── socratic_debugger.py         # Generador de feedback socrático
+└── routing/
+    └── task_classifier.py           # Clasificador de tareas para routing
 ```
 
 ---
 
-## 🎯 Propósito
+## Propósito
 
 Las skills son **módulos independientes** que extienden las capacidades de los agentes del Consejo de Expertos. Cada skill:
 
-- ✅ Tiene una responsabilidad única y bien definida
-- ✅ Puede ser usada por uno o más agentes
-- ✅ Incluye docstrings completos (Google style)
-- ✅ Es testeable de forma aislada
+- Tiene una responsabilidad única y bien definida
+- Puede ser usada por uno o más agentes
+- Incluye docstrings completos (Google style)
+- Es testeable de forma aislada
 
 ---
 
-## 🔗 Mapeo Skill → Agente
+## Mapeo Skill - Agente
 
-| Skill | Agente Consumidor | Propósito |
+| Skill | Agente Consumidor | Proposito |
 |-------|-------------------|-----------|
+| `context_loader` | todos los agentes | Inyectar contexto de dominio al inicio |
+| `task_classifier` | @Orchestrator | Routing de tareas |
+| `token_budget_guard` | @Orchestrator | Control de costos |
 | `stability_guardian` | @Safety_Gate | Validar timesteps MD |
 | `basis_set_architect` | @Safety_Gate | Recomendar bases DFT |
 | `toxicity_predictor` | @Safety_Gate | Detectar toxicidad |
-| `socratic_debugger` | @Safety_Gate | Feedback pedagógico |
+| `episodic_retriever` | @Librarian | Recuperar contexto previo |
+| `graph_memory` | @Librarian | Consultar grafo de conocimiento |
 | `librarian_rag` | @Librarian | Validación experimental |
+| `output_scorer` | @Evaluator | Puntuar respuestas de agentes |
+| `trace_annotator` | @Observability | Registrar trazas de ejecución |
+| `socratic_debugger` | @Pedagogy | Feedback pedagogico |
+| `github_skill_loader` | @Orchestrator | Cargar skills externas dinamicamente |
 
 Ver [GOVERNANCE.md](../GOVERNANCE.md) para detalles del pipeline de agentes.
 
 ---
 
-## 📖 Uso
+## Uso
 
-### Importar una Skill
+### Usar el registry
+
+```python
+from external_skills.registry import load_skill, discover_skills
+
+# Cargar skill por nombre (ultima version disponible)
+retrieve = load_skill("episodic_retriever")
+episodes = retrieve.retrieve(query="nanoparticles", user_id="user_1")
+
+# Cargar version especifica
+retrieve_v1 = load_skill("episodic_retriever@1.0.0")
+
+# Ver todas las skills disponibles
+discover_skills()
+```
+
+### Importar directamente
 
 ```python
 from external_skills.numerical import stability_guardian
 
-# Analizar timestep
 result = stability_guardian.analyze_timestep(
     dt_fs=1.0,
     simulation_type="MD",
     bond_types=['C-H', 'O-H']
 )
-
-print(result['safe'])  # True/False
+print(result['safe'])   # True/False
 print(result['message'])
 ```
 
-### Ejemplo Completo
+---
 
-```python
-from external_skills.numerical import basis_set_architect
-from external_skills.ai_mining import toxicity_predictor
+## Crear una Nueva Skill
 
-# Recomendar base para oro
-basis_info = basis_set_architect.select_basis('Au', accuracy_level='high_precision')
-print(f"Usar: {basis_info['basis']}")
-print(f"Razón: {basis_info['reason']}")
-
-# Predecir toxicidad
-tox = toxicity_predictor.predict_toxicity('HgCl2')
-if tox['is_toxic']:
-    print(f"⚠️ Tóxico: {tox['toxicity_score']:.2f}")
-    print(f"Mecanismos: {', '.join(tox['mechanisms'])}")
-```
+1. Crear el archivo `.py` en el subdirectorio correspondiente
+2. Agregar la entrada en `registry.py` con version, modulo, descripcion y tags
+3. Escribir tests en `tests/`
+4. Actualizar este README y [SKILLS_ATTRIBUTION.md](../SKILLS_ATTRIBUTION.md)
 
 ---
 
-## 🛠️ Crear una Nueva Skill
-
-### 1. Elegir Categoría
-
-Decide en qué subdirectorio va tu skill:
-- `numerical/` - Validación numérica, optimización
-- `ai_mining/` - Modelos ML, predictores
-- `pedagogy/` - Herramientas educativas
-- `orchestration/` - Integración con APIs externas
-
-### 2. Crear Archivo
-
-```python
-# external_skills/numerical/mi_nueva_skill.py
-
-def mi_funcion(param1, param2):
-    """
-    Brief description.
-    
-    Args:
-        param1 (type): Description
-        param2 (type): Description
-        
-    Returns:
-        dict: {
-            "resultado": value,
-            "mensaje": str,
-            "metadata": dict
-        }
-        
-    Example:
-        >>> result = mi_funcion(10, 20)
-        >>> print(result['resultado'])
-        30
-    """
-    # Implementación
-    return {
-        "resultado": param1 + param2,
-        "mensaje": "Operación exitosa",
-        "metadata": {}
-    }
-```
-
-### 3. Añadir Tests
-
-```python
-# tests/test_mi_nueva_skill.py
-
-from external_skills.numerical import mi_nueva_skill
-
-def test_mi_funcion():
-    result = mi_nueva_skill.mi_funcion(10, 20)
-    assert result['resultado'] == 30
-    assert 'mensaje' in result
-```
-
-### 4. Documentar
-
-- Añade entrada en este README
-- Actualiza [SKILLS_ATTRIBUTION.md](../SKILLS_ATTRIBUTION.md)
-- Documenta qué agente la consumirá en [GOVERNANCE.md](../GOVERNANCE.md)
-
----
-
-## 🧪 Testing
+## Testing
 
 ```bash
-# Activar ambiente
 conda activate ia_nano
-
-# Ejecutar tests
-python -m pytest tests/ -v
-
-# Test específico
-python -m pytest tests/test_stability_guardian.py -v
+pytest tests/ -v
 ```
 
 ---
 
-## 📚 Recursos
+## Referencias
 
-- [SKILLS_ATTRIBUTION.md](../SKILLS_ATTRIBUTION.md) - Origen y créditos
-- [CONTRIBUTING.md](../CONTRIBUTING.md) - Guía de contribución
+- [SKILLS_ATTRIBUTION.md](../SKILLS_ATTRIBUTION.md) - Origen y creditos
+- [CONTRIBUTING.md](../CONTRIBUTING.md) - Guia de contribucion
 - [GOVERNANCE.md](../GOVERNANCE.md) - Roles de agentes
-
----
-
-## 🔮 Roadmap
-
-### Próximas Skills
-
-- [ ] `band_structure_analyzer` - Análisis de estructura de bandas
-- [ ] `reaction_pathway_finder` - Búsqueda de caminos de reacción
-- [ ] `ml_force_field_trainer` - Entrenamiento de campos de fuerza ML
-- [ ] `crystal_structure_validator` - Validación de simetrías cristalinas
-
-¿Tienes ideas? Abre un [Issue](https://github.com/ljyudico/Antigravity-Nano-Research-Multiagentic-Core/issues) con la etiqueta `skill-proposal`.
-
----
-
-<div align="center">
-  <sub>Skills desarrolladas para investigación científica rigurosa 🔬</sub>
-</div>
