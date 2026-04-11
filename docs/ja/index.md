@@ -19,12 +19,12 @@
 
 | ユニット | テーマ | Notebooks |
 |---------|--------|-----------|
-| [ユニット1](units/unit1.md) | ナノスケールモデリング | 1 |
-| [ユニット2](units/unit2.md) | 高度な分子シミュレーション | 2 |
-| [ユニット3](units/unit3.md) | ナノ材料のML | 4 |
-| [ユニット4](units/unit4.md) | 応用AI | 2 |
-| [ユニット5](units/unit5.md) | マルチエージェントシステム | 9 |
-| [ユニット6](units/unit6.md) | 統合プロジェクト | 6 |
+| [ユニット1](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_01_nanoscale_modeling) | ナノスケールモデリング | 1 |
+| [ユニット2](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_02_molecular_simulation) | 高度な分子シミュレーション | 2 |
+| [ユニット3](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_03_ml_nanomaterials) | ナノ材料のML | 4 |
+| [ユニット4](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_04_applied_ai) | 応用AI | 2 |
+| [ユニット5](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_05_multi_agent_sys) | マルチエージェントシステム | 9 |
+| [ユニット6](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_06_integration_project) | 統合プロジェクト | 6 |
 
 ---
 

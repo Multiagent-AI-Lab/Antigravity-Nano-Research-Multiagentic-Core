@@ -19,12 +19,12 @@
 
 | इकाई | विषय | Notebooks |
 |------|------|-----------|
-| [इकाई 1](units/unit1.md) | नैनोस्केल मॉडलिंग | 1 |
-| [इकाई 2](units/unit2.md) | उन्नत आणविक सिमुलेशन | 2 |
-| [इकाई 3](units/unit3.md) | नैनोमटेरियल्स के लिए ML | 4 |
-| [इकाई 4](units/unit4.md) | अनुप्रयुक्त एआई | 2 |
-| [इकाई 5](units/unit5.md) | मल्टी-एजेंट सिस्टम | 9 |
-| [इकाई 6](units/unit6.md) | एकीकरण परियोजना | 6 |
+| [इकाई 1](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_01_nanoscale_modeling) | नैनोस्केल मॉडलिंग | 1 |
+| [इकाई 2](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_02_molecular_simulation) | उन्नत आणविक सिमुलेशन | 2 |
+| [इकाई 3](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_03_ml_nanomaterials) | नैनोमटेरियल्स के लिए ML | 4 |
+| [इकाई 4](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_04_applied_ai) | अनुप्रयुक्त एआई | 2 |
+| [इकाई 5](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_05_multi_agent_sys) | मल्टी-एजेंट सिस्टम | 9 |
+| [इकाई 6](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_06_integration_project) | एकीकरण परियोजना | 6 |
 
 ---
 

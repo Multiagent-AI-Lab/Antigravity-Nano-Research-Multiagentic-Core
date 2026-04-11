@@ -19,12 +19,12 @@
 
 | 单元 | 主题 | Notebooks |
 |------|------|-----------|
-| [第1单元](units/unit1.md) | 纳米尺度建模 | 1 |
-| [第2单元](units/unit2.md) | 高级分子模拟 | 2 |
-| [第3单元](units/unit3.md) | 纳米材料机器学习 | 4 |
-| [第4单元](units/unit4.md) | 应用人工智能 | 2 |
-| [第5单元](units/unit5.md) | 多智能体系统 | 9 |
-| [第6单元](units/unit6.md) | 综合项目 | 6 |
+| [第1单元](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_01_nanoscale_modeling) | 纳米尺度建模 | 1 |
+| [第2单元](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_02_molecular_simulation) | 高级分子模拟 | 2 |
+| [第3单元](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_03_ml_nanomaterials) | 纳米材料机器学习 | 4 |
+| [第4单元](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_04_applied_ai) | 应用人工智能 | 2 |
+| [第5单元](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_05_multi_agent_sys) | 多智能体系统 | 9 |
+| [第6单元](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_06_integration_project) | 综合项目 | 6 |
 
 ---
 

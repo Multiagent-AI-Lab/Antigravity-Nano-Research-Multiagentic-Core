@@ -25,12 +25,12 @@ El resultado es un curso único para investigadores y estudiantes en ciencias de
 
 | Unidad | Tema | Notebooks |
 |--------|------|-----------|
-| [Unidad 1](units/unit1.md) | Modelado a Nanoescala | 1 |
-| [Unidad 2](units/unit2.md) | Simulación Molecular Avanzada | 2 |
-| [Unidad 3](units/unit3.md) | ML para Nanomateriales | 4 |
-| [Unidad 4](units/unit4.md) | IA Aplicada a Nanotecnología | 2 |
-| [Unidad 5](units/unit5.md) | Sistemas Multi-Agente | 9 |
-| [Unidad 6](units/unit6.md) | Proyecto Integrador | 6 |
+| [Unidad 1](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_01_nanoscale_modeling) | Modelado a Nanoescala | 1 |
+| [Unidad 2](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_02_molecular_simulation) | Simulación Molecular Avanzada | 2 |
+| [Unidad 3](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_03_ml_nanomaterials) | ML para Nanomateriales | 4 |
+| [Unidad 4](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_04_applied_ai) | IA Aplicada a Nanotecnología | 2 |
+| [Unidad 5](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_05_multi_agent_sys) | Sistemas Multi-Agente | 9 |
+| [Unidad 6](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/tree/main/educational_content/unit_06_integration_project) | Proyecto Integrador | 6 |
 
 ---
 
