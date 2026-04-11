@@ -1,6 +1,7 @@
 # Antigravity Nano Research Multiagentic Core
 
 [![CI](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/actions/workflows/ci.yml/badge.svg)](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/actions/workflows/ci.yml)
+[![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-blue.svg)](https://multiagent-ai-lab.github.io/Antigravity-Nano-Research-Multiagentic-Core/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Built with Antigravity](https://img.shields.io/badge/Built%20with-Antigravity-purple.svg)](https://github.com/google-deepmind/antigravity)
 [![Python 3.11](https://img.shields.io/badge/Python-3.11-green.svg)](https://www.python.org/downloads/)
