@@ -1,0 +1,78 @@
+name: Deploy MkDocs Documentation
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install MkDocs dependencies
+        run: |
+          pip install mkdocs-material \
+                      mkdocs-i18n \
+                      mkdocs-material[imaging] \
+                      mkdocs-static-i18n
+
+      - name: Create placeholder logo if missing
+        run: |
+          mkdir -p docs/assets
+          if [ ! -f docs/assets/logo.png ]; then
+            python3 -c "
+          import struct, zlib, base64
+          # Minimal 32x32 white PNG
+          def create_minimal_png():
+              sig = b'\\x89PNG\\r\\n\\x1a\\n'
+              def chunk(tp, data):
+                  c = struct.pack('>I', len(data)) + tp + data
+                  return c + struct.pack('>I', zlib.crc32(c[4:]) & 0xffffffff)
+              ihdr = chunk(b'IHDR', struct.pack('>IIBBBBB', 32, 32, 8, 2, 0, 0, 0))
+              raw = b'\\x00' + b'\\xff\\xff\\xff' * 32
+              idat = chunk(b'IDAT', zlib.compress(raw * 32))
+              iend = chunk(b'IEND', b'')
+              return sig + ihdr + idat + iend
+          with open('docs/assets/logo.png', 'wb') as f:
+              f.write(create_minimal_png())
+          "
+          fi
+
+      - name: Build MkDocs site
+        run: mkdocs build --strict
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
