@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [Unreleased] - 2026-04-11
+
+### Added
+
+- **U5_04_GOOGLE_ADK_A2A_COMP_GEMMA4.ipynb** — Notebook Unit 5, Leccion 4: Google ADK 1.0 con protocolo A2A y Gemma4. Incluye: LlmAgent, SequentialAgent, ParallelAgent, LoopAgent, BuiltInCodeExecutor, BaseTool con Pydantic, checkpoints de sesion, AgentCard A2A, cliente cross-framework con Bearer token, y fallbacks locales para cuota agotada.
+
+---
+
 ## [1.0.0] - 2026-04-08
 
 ### Added
