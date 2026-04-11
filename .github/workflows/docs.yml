@@ -31,10 +31,7 @@ jobs:
 
       - name: Install MkDocs dependencies
         run: |
-          pip install mkdocs-material \
-                      mkdocs-i18n \
-                      mkdocs-material[imaging] \
-                      mkdocs-static-i18n
+          pip install "mkdocs-material>=9.5"
 
       - name: Create placeholder logo if missing
         run: |
