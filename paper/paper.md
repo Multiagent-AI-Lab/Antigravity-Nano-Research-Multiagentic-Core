@@ -25,152 +25,210 @@ bibliography: paper.bib
 **Antigravity Nano Research Multiagentic Core** is an open-source framework
 that integrates multi-agent large language model (LLM) systems with
 computational nanotechnology research and education. The system provides a
-structured six-unit curriculum (30+ Jupyter notebooks) that progressively
+structured six-unit curriculum of 25 Jupyter notebooks that progressively
 covers nanoscale simulation, machine learning for materials, and multi-agent
-orchestration. A central design goal is accessibility: a fully reproducible
-demonstration system based on Au$_{13}$ nanoclusters
-(`educational_content/unit_06_integration_project/`) runs end-to-end without
-any API keys or paid subscriptions, using only the open-source Atomic Simulation
-Environment [@Larsen2017], scikit-learn [@Pedregosa2011], and mock retrieval components.
+orchestration using LangGraph, CrewAI, Google ADK, smolagents, and AutoGen
+[@LangGraph2024; @CrewAI2024; @GoogleADK2025; @Smolagents2024; @AutoGen2023].
+
+A defining feature is accessibility: a fully reproducible demonstration
+pipeline based on Au$_{13}$ nanoclusters (Unit 6, Section 5A) runs
+end-to-end without any API keys or paid subscriptions, using only the
+open-source Atomic Simulation Environment [@Larsen2017], scikit-learn
+[@Pedregosa2011], and a mock graph retrieval module backed by NetworkX
+[@NetworkX2008]. Figure 1 illustrates the six-unit learning progression.
 
 The framework targets graduate students, researchers, and educators in
-computational materials science who wish to adopt AI-assisted workflows without
-starting from scratch. It is simultaneously a *teaching platform* (complete
-curriculum, rubric, executable demos) and a *research prototype* (Graph RAG,
-Model Context Protocol integration, production deployment with FastAPI).
+computational materials science who wish to adopt AI-assisted workflows.
+Crucially, the repository itself is a *living demonstration* of what it
+teaches: it was co-developed by a seven-agent AI council (documented in
+`U5_00_META_CONSTRUYENDO_CON_IA.ipynb`) using the same multi-agent stack
+taught in Unit 5. This self-referential design — the system is proof of its
+own pedagogy — is documented explicitly in the meta-notebook and illustrated
+in Figure 2.
+
+![Figure 1: Six-unit curriculum structure with notebook counts and key technologies per unit.](figure1_curriculum.png)
 
 # Statement of Need
 
 The adoption of LLM-based agents in computational science is growing rapidly,
-yet the existing ecosystem presents a fragmented landscape: general-purpose
-frameworks (LangGraph [@LangGraph2024], CrewAI [@CrewAI2024], Google ADK
-[@GoogleADK2025], smolagents [@Smolagents2024], AutoGen [@AutoGen2023],
-MetaGPT [@MetaGPT2023]) do not address domain-specific scientific tools such
-as atomistic simulators, materials databases, or spectroscopic data pipelines.
+yet the existing ecosystem presents a fragmented landscape. General-purpose
+frameworks (LangGraph, CrewAI, Google ADK, smolagents, AutoGen, MetaGPT
+[@MetaGPT2023]) do not address domain-specific scientific tools such as
+atomistic simulators, materials databases, or spectroscopic data pipelines.
 Conversely, specialized computational chemistry platforms (AiiDA, AutomatMiner,
-ChemCrow) do not offer multi-agent orchestration, educational pathways, or
+ChemCrow) do not offer multi-agent orchestration, educational curricula, or
 systematic comparison of LLM frameworks.
 
 This gap has practical consequences: a researcher or instructor who wishes to
 teach or prototype an AI-assisted nanotechnology workflow must integrate
-multiple libraries manually, often reinventing common infrastructure (LLM
-routing, tool registration, observability, deployment). No existing open
-resource provides (1) a complete, executable curriculum in this domain,
-(2) a principled comparison of seven major agent frameworks from the perspective
-of scientific computing, and (3) a demonstration that runs without paid API
-access.
+multiple libraries without guidance on how to select, combine, or evaluate
+frameworks. No existing open resource provides simultaneously (1) a complete,
+executable curriculum with nanotechnology domain coverage, (2) a principled
+comparison of seven major agent frameworks from the perspective of scientific
+computing, and (3) a demonstration executable without paid API access.
 
-**Antigravity Nano Research Multiagentic Core** addresses all three gaps.
-By combining a structured educational progression with production-quality
-components—automated tests, CI/CD, FastAPI deployment, Graph RAG, and MCP
-integration—it lowers the barrier for scientific groups to adopt agentic AI
-while producing pedagogically sound teaching materials.
+**Antigravity Nano Research Multiagentic Core** addresses all three gaps
+within a single, cohesive repository. Moreover, the meta-notebook `U5_00`
+documents explicitly how an AI system (Antigravity) collaborated with the
+human author to design the skill architecture, generate code, and audit
+quality — making the development process itself a pedagogical case study in
+human-AI collaboration for scientific software.
 
 # Software Description
 
-## Architecture
+## System Architecture
 
-The system is organized into six progressive educational units:
+The framework operates at three interdependent levels, illustrated in Figure 2.
 
-| Unit | Topic | Key Technologies |
-|:-----|:------|:----------------|
-| 1 | Nanoscale Modeling | ASE [@Larsen2017], RDKit, OpenMM |
-| 2 | Molecular Simulation (MD, DFT) | ASE/EMT, OpenMM |
-| 3 | Machine Learning for Nanomaterials | scikit-learn [@Pedregosa2011], PyTorch |
-| 4 | Applied AI in Nanotechnology | Materials Project API, Computer Vision |
-| 5 | Multi-Agent Systems | LangGraph, CrewAI, ADK, smolagents, AutoGen |
-| 6 | Integration Project | Full pipeline, FastAPI, deployment |
+**Development level (how the repository was built):** A seven-agent council
+defined in `GOVERNANCE.md` — @Architect, @Scientist, @Engineer, @Safety\_Gate,
+@Analyst, @Librarian, and @QA — co-developed the repository with the human
+author using the Antigravity AI system. Each agent has specific responsibilities
+and feedback loops (L1: safety validation; L2: experimental comparison;
+L3: quality audit). This process is documented transparently in
+`U5_00_META_CONSTRUYENDO_CON_IA.ipynb`.
 
-Each unit contains 2–9 Jupyter notebooks with a common structure: executable
-demonstration first, conceptual explanation second, and scaffolded exercises
-connecting to the student's own research.
+**Infrastructure level (shared technical stack):** A modular layer shared by
+the development process and the educational content.
+
+**Student output level (what the learner produces):** Unit 6 provides
+scaffolded notebooks where students implement their own scientific pipeline
+using the tools from Units 1-5, deploy it as a FastAPI service, and document
+results with a formal 100-point rubric.
+
+![Figure 2: Three-level architecture showing the meta-loop — the repository was built using the same stack it teaches.](figure2_architecture.png)
+
+## Curriculum Structure
+
+The six-unit curriculum (25 notebooks total) covers a progressive learning
+path, as summarized in Table 1:
+
+| Unit | Topic | Notebooks | Key Technologies |
+|:-----|:------|----------:|:----------------|
+| 1 | Nanoscale Modeling | 1 | ASE [@Larsen2017], RDKit, NGLView |
+| 2 | Molecular Simulation (MD, DFT) | 2 | ASE/EMT, OpenMM |
+| 3 | Machine Learning for Nanomaterials | 4 | scikit-learn [@Pedregosa2011], PyTorch |
+| 4 | Applied AI in Nanotechnology | 2 | Materials Project API, Computer Vision |
+| 5 | Multi-Agent Systems | 10 | LangGraph, CrewAI, ADK, smolagents, Graph RAG, MCP |
+| 6 | Integration Project | 6 | Full pipeline, FastAPI, Docker |
+
+Unit 5 is the largest unit (10 notebooks) and serves as the conceptual bridge
+between the scientific domain knowledge of Units 1-4 and the end-to-end
+integration of Unit 6. A dedicated meta-notebook (`U5_00`) documents
+the development methodology itself.
 
 ## Unified LLM Routing
 
 A central utility function `get_llm()` provides transparent routing across
-five LLM backends: OpenRouter (cloud, multi-model), Gemini 2.5 Flash/Pro
-(Google), Llama 4 Scout (Meta via OpenRouter), Kimi-K2.5 (Moonshot AI), and
-Ollama (fully local inference). This design ensures that the same notebook
-code runs regardless of the available backend, enabling use in resource-
-constrained environments (no GPU, no paid API) and in production deployments
-interchangeably.
+five LLM backends: OpenRouter (cloud, multi-model access), Gemini 2.5
+Flash/Pro (Google), Llama 4 Scout (Meta via OpenRouter), Kimi-K2.5
+(Moonshot AI), and Ollama (fully local inference). The same notebook code
+runs regardless of the available backend, enabling use in resource-constrained
+settings — institutions without GPU clusters or paid API accounts — as well
+as production deployments.
 
 ## Au$_{13}$ Reproducible Demonstration
 
-Unit 6 (`U6_03`) implements a four-tool agentic pipeline for Au$_{13}$
-nanocluster research:
+Unit 6, Section 5A implements a four-tool agentic pipeline for Au$_{13}$
+nanocluster research that requires no API keys:
 
-1. **Structure optimizer** — ASE/EMT geometry optimization
-2. **Property predictor** — Gradient Boosting Regressor (scikit-learn) trained
-   on cluster size features
-3. **Literature search** — mock Graph RAG backed by NetworkX [@NetworkX2008]
-4. **Report generator** — structured JSON report via LLM
+1. **`tool_optimizar_estructura`** — ASE/EMT geometry optimization
+   [@Larsen2017]
+2. **`tool_predecir_propiedad`** — Gradient Boosting Regressor prediction of
+   cluster properties using scikit-learn [@Pedregosa2011]
+3. **`tool_buscar_literatura`** — mock Graph RAG retrieval backed by
+   NetworkX [@NetworkX2008]
+4. **`tool_generar_reporte`** — structured JSON scientific report
 
-The complete pipeline runs in under five minutes on a standard laptop without
-internet connectivity, producing a reproducible analysis report. This serves
-as the canonical demonstration for the course and as a baseline for benchmarking
-in future research publications.
+Section 5B provides a scaffold (marked `[ESTUDIANTE: ...]`) where students
+replace each tool with their own domain-specific calculators and connect them
+to a LangGraph ReAct agent with a live LLM.
+
+## External Skills Registry
+
+The `external_skills/` package provides 13 Python modules organized in
+8 categories, loaded via a central registry (`registry.py`) with semantic
+versioning (`load_skill("episodic_retriever@1.0.0")`):
+
+| Category | Modules |
+|:---------|:--------|
+| `numerical` | `stability_guardian`, `basis_set_architect` |
+| `memory` | `episodic_retriever`, `graph_memory` |
+| `ai_mining` | `toxicity_predictor` |
+| `pedagogy` | `socratic_debugger` |
+| `evaluation` | `output_scorer` |
+| `observability` | `trace_annotator` |
+| `routing` | `task_classifier` |
+| `apis` | `token_budget_guard`, `github_skill_loader` |
+| `orchestration` | `librarian_rag` |
+| `agent_warmup` | `context_loader` |
+
+Scientific-domain modules include `stability_guardian` (MD timestep
+validation), `basis_set_architect` (DFT basis set recommendation),
+`toxicity_predictor` (molecular toxicity heuristics), and `librarian_rag`
+(literature retrieval against Materials Project data).
 
 ## Graph RAG with Multiple Backends
 
-Unit 5 (`U5_06`) implements a Graph Retrieval-Augmented Generation module
-supporting four storage backends:
+Unit 5, notebook `U5_06`, implements Graph Retrieval-Augmented Generation
+with four storage backends:
 
-- **NetworkX** [@NetworkX2008] — in-memory prototype, zero dependencies
+- **NetworkX** [@NetworkX2008] — in-memory prototype, zero server dependencies
 - **Kùzu** [@Kuzu2023] — embedded graph database, no server required
 - **Neo4j** — production graph database with Cypher query language
-- **Graphiti** [@Graphiti2024] — episodic memory for stateful agents
+- **Graphiti** [@Graphiti2024] — episodic memory for stateful, long-running agents
 
-A decision table guides users and agents through backend selection based on
-data size, query type (factual, relational, temporal), and deployment constraints.
+A decision table guides users through backend selection based on data volume,
+query type (factual, relational, temporal, multi-hop), and deployment constraints.
 
 ## Model Context Protocol Integration
 
-Unit 5 (`U5_04`) implements an MCP server [@MCP2024] that exposes ASE
-computational tools—structure optimization, energy calculation, band gap
-estimation—as standardized JSON-RPC tools consumable by any MCP-compliant
-agent. This establishes a reproducible interface between LLM orchestrators
-and domain-specific scientific calculators, independent of the LLM backend.
+Notebook `U5_04` implements an MCP server [@MCP2024] that exposes ASE
+computational tools as standardized JSON-RPC tools over stdio. This
+establishes a reproducible, LLM-agnostic interface between orchestrators and
+domain-specific scientific calculators. The same workflow produces identical
+numerical results when run with different LLM backends, a necessary condition
+for reproducible AI-assisted science.
 
-## Observability and Deployment
+## Production Deployment and Observability
 
-The framework integrates LangSmith [@LangSmith2024] for distributed tracing
-of agent calls, token usage, and tool invocations. Production deployment
-is implemented via FastAPI [@FastAPI2018] using the modern `lifespan` context
-manager pattern, with a ready-to-adapt `Dockerfile` for containerized deployment.
+Unit 6 (`U6_04`) provides a FastAPI [@FastAPI2018] template using the modern
+`lifespan` context manager pattern, with a production-ready `Dockerfile`
+adaptable to any student project. Integration with LangSmith [@LangSmith2024]
+provides distributed tracing of agent calls, token usage, and tool invocations
+across all Units 5-6 notebooks.
 
-## Test Suite
+## Automated Test Suite
 
-The project includes an automated test suite validated on Python 3.11:
+The project includes 102 automated tests across three modules, validated on
+Python 3.11 with pytest 9.0.2:
 
-- **19 unit tests** (`tests/test_unit05.py`) covering arithmetic safety,
-  security constraints (import blocking, attribute access blocking), and
-  external skill module integrity — all passing (0.16 s, pytest 9.0.2)
-- **`tests/test_unit03_parte2.py`** — neural network logic validation
-- **`tests/test_external_skills.py`** — modular skill system tests
-- GitHub Actions CI executes the full test suite on every push to `main`
+- **`tests/test_unit05.py`** — 19 tests covering arithmetic safety parsing and
+  External Skills module integrity (0.16 s total runtime)
+- **`tests/test_unit03_parte2.py`** — 26 tests for neural network logic and
+  numerical gradient validation
+- **`tests/test_external_skills.py`** — 57 tests covering the full External
+  Skills registry, including `context_loader`, `output_scorer`,
+  `trace_annotator`, `token_budget_guard`, and `episodic_retriever`
 
-## External Skills
-
-The `external_skills/` directory provides nine reusable Python modules for
-scientific validation: `stability_guardian` (MD timestep validation),
-`basis_set_architect` (DFT basis set recommendation), `toxicity_predictor`
-(molecular toxicity mock), `socratic_debugger` (pedagogical feedback
-generator), `librarian_rag` (literature RAG), and orchestration utilities
-(`context_loader`, `task_classifier`, `output_scorer`, `episodic_retriever`,
-`trace_annotator`, `token_budget_guard`). All skills are designed as
-drop-in modules that can be used independently or composed in agent workflows.
+GitHub Actions CI executes the full test suite on every push to `main`.
 
 # Acknowledgements
 
-The author thanks the teams behind the open-source tools that make this
-framework possible: ASE [@Larsen2017] (DTU Physics), LangGraph [@LangGraph2024]
-and LangSmith [@LangSmith2024] (LangChain Inc.), smolagents [@Smolagents2024]
-(Hugging Face), Google ADK [@GoogleADK2025] (Google LLC), AutoGen [@AutoGen2023]
-(Microsoft Research), MetaGPT [@MetaGPT2023], the Model Context Protocol
-[@MCP2024] (Anthropic), Kùzu [@Kuzu2023], Graphiti [@Graphiti2024] (Zep AI),
-FastAPI [@FastAPI2018], NetworkX [@NetworkX2008], scikit-learn [@Pedregosa2011],
-and NumPy [@Harris2020].
+The development of this framework demonstrates the collaborative potential of
+human-AI pair programming for scientific software: the repository structure,
+skill architecture, and notebook curriculum were co-designed with the
+Antigravity AI system (Google DeepMind), as documented in
+`U5_00_META_CONSTRUYENDO_CON_IA.ipynb`.
+
+The author also thanks the teams behind the open-source tools that form the
+technical foundation: ASE [@Larsen2017] (DTU Physics), LangGraph
+[@LangGraph2024] and LangSmith [@LangSmith2024] (LangChain Inc.), smolagents
+[@Smolagents2024] (Hugging Face), Google ADK [@GoogleADK2025] (Google LLC),
+AutoGen [@AutoGen2023] (Microsoft Research), MetaGPT [@MetaGPT2023], the
+Model Context Protocol [@MCP2024] (Anthropic), Kùzu [@Kuzu2023], Graphiti
+[@Graphiti2024] (Zep AI), FastAPI [@FastAPI2018], NetworkX [@NetworkX2008],
+scikit-learn [@Pedregosa2011], and NumPy [@Harris2020].
 
 This work was carried out at the Universidad de La Ciénega del Estado de
 Michoacán de Ocampo (UCEMICH), México.
