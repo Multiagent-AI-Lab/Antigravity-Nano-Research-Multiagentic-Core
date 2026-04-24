@@ -27,15 +27,19 @@ that integrates multi-agent large language model (LLM) systems with
 computational nanotechnology research and education. The system provides a
 structured six-unit curriculum of 25 Jupyter notebooks that progressively
 covers nanoscale simulation, machine learning for materials, and multi-agent
-orchestration using LangGraph, CrewAI, Google ADK, smolagents, and AutoGen
-[@LangGraph2024; @CrewAI2024; @GoogleADK2025; @Smolagents2024; @AutoGen2023].
+orchestration using LangGraph, CrewAI, Google ADK, smolagents, and LangChain
+[@LangGraph2024; @CrewAI2024; @GoogleADK2025; @Smolagents2024].
 
 A defining feature is accessibility: a fully reproducible demonstration
 pipeline based on Au$_{13}$ nanoclusters (Unit 6, Section 5A) runs
 end-to-end without any API keys or paid subscriptions, using only the
 open-source Atomic Simulation Environment [@Larsen2017], scikit-learn
 [@Pedregosa2011], and a mock graph retrieval module backed by NetworkX
-[@NetworkX2008]. Figure 1 illustrates the six-unit learning progression.
+[@NetworkX2008]. This zero-cost entry point covers the complete agentic
+pattern; Section 5B connects the same tools to a live LLM and requires
+at least one API key, with typical research sessions costing less than
+\$0.05 using Gemini 2.5 Flash (~\$0.15/1M tokens) or \$0 with Ollama
+local inference. Figure 1 illustrates the six-unit learning progression.
 
 The framework targets graduate students, researchers, and educators in
 computational materials science who wish to adopt AI-assisted workflows.
@@ -120,12 +124,13 @@ the development methodology itself.
 ## Unified LLM Routing
 
 A central utility function `get_llm()` provides transparent routing across
-five LLM backends: OpenRouter (cloud, multi-model access), Gemini 2.5
-Flash/Pro (Google), Llama 4 Scout (Meta via OpenRouter), Kimi-K2.5
-(Moonshot AI), and Ollama (fully local inference). The same notebook code
-runs regardless of the available backend, enabling use in resource-constrained
-settings — institutions without GPU clusters or paid API accounts — as well
-as production deployments.
+four LLM backends in priority order: (1) **OpenRouter** (cloud, multi-model
+access — including Gemini 2.5, Llama 4 Scout, and Kimi-K2.5 as selectable
+models), (2) **Google Gemini** (direct via `langchain_google_genai`),
+(3) **OpenAI** (`gpt-4o-mini` by default), and (4) **Ollama** (fully local
+inference, zero cost). The same notebook code runs regardless of the available
+backend, enabling use in resource-constrained settings — institutions without
+GPU clusters or paid API accounts — as well as production deployments.
 
 ## Au$_{13}$ Reproducible Demonstration
 
@@ -147,7 +152,7 @@ to a LangGraph ReAct agent with a live LLM.
 ## External Skills Registry
 
 The `external_skills/` package provides 13 Python modules organized in
-8 categories, loaded via a central registry (`registry.py`) with semantic
+10 categories, loaded via a central registry (`registry.py`) with semantic
 versioning (`load_skill("episodic_retriever@1.0.0")`):
 
 | Category | Modules |
@@ -183,20 +188,29 @@ query type (factual, relational, temporal, multi-hop), and deployment constraint
 
 ## Model Context Protocol Integration
 
-Notebook `U5_04` implements an MCP server [@MCP2024] that exposes ASE
-computational tools as standardized JSON-RPC tools over stdio. This
-establishes a reproducible, LLM-agnostic interface between orchestrators and
-domain-specific scientific calculators. The same workflow produces identical
-numerical results when run with different LLM backends, a necessary condition
-for reproducible AI-assisted science.
+Notebook `U5_04` implements a `nano-materials-mcp` server [@MCP2024] that
+demonstrates the Model Context Protocol pattern by exposing nanomaterials
+property query tools (`get_nano_properties`, `compare_materials`) over stdio.
+This establishes a reproducible, LLM-agnostic interface between orchestrators
+and domain-specific scientific tools — the same pattern that, in a production
+deployment, would wrap the ASE-based calculators from Units 1–4. Any framework
+that supports MCP (Google ADK, LangChain, CrewAI) can consume the server
+without code changes, a necessary condition for reproducible AI-assisted
+science.
 
 ## Production Deployment and Observability
 
 Unit 6 (`U6_04`) provides a FastAPI [@FastAPI2018] template using the modern
 `lifespan` context manager pattern, with a production-ready `Dockerfile`
-adaptable to any student project. Integration with LangSmith [@LangSmith2024]
-provides distributed tracing of agent calls, token usage, and tool invocations
-across all Units 5-6 notebooks.
+adaptable to any student project. Any pipeline built in Unit 6 can be served
+as a REST API without additional configuration, bridging the gap between a
+working research prototype and a deployable scientific service.
+
+Agent observability is provided through LangSmith [@LangSmith2024] integration
+across all Units 5-6 notebooks, recording per-node token usage, latency, tool
+invocations, and errors for every agent run. This gives researchers a
+reproducible audit trail of every agent decision — the computational equivalent
+of a laboratory notebook for AI-assisted workflows.
 
 ## Automated Test Suite
 
@@ -217,9 +231,13 @@ GitHub Actions CI executes the full test suite on every push to `main`.
 
 The development of this framework demonstrates the collaborative potential of
 human-AI pair programming for scientific software: the repository structure,
-skill architecture, and notebook curriculum were co-designed with the
-Antigravity AI system (Google DeepMind), as documented in
-`U5_00_META_CONSTRUYENDO_CON_IA.ipynb`.
+skill architecture, and notebook curriculum were co-developed using Antigravity
+(Google's agent development IDE), structured as the seven-agent council defined
+in `GOVERNANCE.md`. API providers used during development were Google AI Studio
+(free tier), OpenRouter, and the Claude API (Anthropic). The full development
+process is documented transparently in `U5_00_META_CONSTRUYENDO_CON_IA.ipynb`,
+making the repository itself a pedagogical case study in low-cost,
+multi-provider human-AI collaboration for scientific software.
 
 The author also thanks the teams behind the open-source tools that form the
 technical foundation: ASE [@Larsen2017] (DTU Physics), LangGraph
