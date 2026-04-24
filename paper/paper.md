@@ -71,6 +71,21 @@ executable curriculum with nanotechnology domain coverage, (2) a principled
 comparison of seven major agent frameworks from the perspective of scientific
 computing, and (3) a demonstration executable without paid API access.
 
+**Accessibility and cost** represent an additional barrier that existing tools
+do not address systematically. Table 2 summarizes the cost profile for
+representative usage scenarios:
+
+| Scenario | Estimated cost |
+|:---------|:--------------|
+| Demo Section 5A (complete Au$_{13}$ pipeline) | **\$0** — no API key required |
+| Typical research session (Gemini 2.5 Flash, ~50 tool calls) | ~\$0.01–\$0.05 |
+| Full month of use — active graduate student | **< \$5** |
+| Fully local alternative (Ollama llama3.2) | **\$0** |
+
+Cost estimates assume ~100K tokens per typical agent session at
+\$0.15/1M tokens (Gemini 2.5 Flash pricing). Institutions without any API
+budget can use the fully local Ollama path at zero cost.
+
 **Antigravity Nano Research Multiagentic Core** addresses all three gaps
 within a single, cohesive repository. Moreover, the meta-notebook `U5_00`
 documents explicitly how an AI system (Antigravity) collaborated with the
