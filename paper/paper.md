@@ -242,6 +242,14 @@ Python 3.11 with pytest 9.0.2:
 
 GitHub Actions CI executes the full test suite on every push to `main`.
 
+# Research Applications
+
+The framework is currently integrated into a graduate-level course on computational nanotechnology at the Universidad de La Ciénega del Estado de Michoacán de Ocampo (UCEMICH), México, where it serves as the primary teaching platform for multi-agent AI workflows. The Au$_{13}$ reproducible pipeline (Unit 6, Section 5A) provides a zero-cost, self-contained entry point for adoption by research groups without GPU infrastructure or institutional API budgets. The modular External Skills architecture is domain-agnostic: any scientific discipline requiring LLM-assisted tooling can reuse the registry, routing, and observability layers while substituting domain-specific calculators. The transparent documentation of the AI-assisted development process in `U5_00_META_CONSTRUYENDO_CON_IA.ipynb` makes the repository a practical case study for research groups exploring human-AI collaboration methodologies for scientific software development.
+
+# AI Usage Disclosure
+
+This software and the accompanying paper were developed with substantive assistance from generative AI tools. The repository structure, skill module architecture, notebook curriculum, and test suite were co-designed with the Antigravity agent development IDE (Google), structured as a seven-agent council (@Architect, @Scientist, @Engineer, @Safety_Gate, @Analyst, @Librarian, @QA) as defined in `GOVERNANCE.md`. LLM API providers used were Google AI Studio (free tier), OpenRouter, and the Claude API (Anthropic). All generated code was reviewed, tested against the 102-test automated suite, and verified by the author. The complete AI-assisted development process is documented transparently in `U5_00_META_CONSTRUYENDO_CON_IA.ipynb`, and this transparency is itself a pedagogical contribution of the work.
+
 # Acknowledgements
 
 The development of this framework demonstrates the collaborative potential of

@@ -21,13 +21,14 @@ abstract: >-
   Antigravity Nano Research Multiagentic Core is an open-source educational
   and research framework that integrates multi-agent AI systems with
   computational nanotechnology. It provides a structured six-unit curriculum
-  (30+ Jupyter notebooks) covering nanoscale simulation, machine learning for
+  (25 Jupyter notebooks) covering nanoscale simulation, machine learning for
   materials, and multi-agent orchestration using LangGraph, CrewAI, Google ADK,
-  smolagents, and AutoGen. The framework features a reproducible demonstration
+  and smolagents. The framework features a reproducible demonstration
   system (Au13 nanoclusters) executable without API keys, a unified LLM routing
-  layer supporting five backends, Graph RAG with four storage backends, and
-  MCP (Model Context Protocol) integration for computational tools.
-  All components are validated with an automated test suite (pytest).
+  layer supporting four backends (OpenRouter, Google Gemini, OpenAI, Ollama),
+  Graph RAG with four storage backends, and MCP (Model Context Protocol)
+  integration for computational tools.
+  All components are validated with 102 automated tests (pytest 9.0.2).
 keywords:
   - multi-agent systems
   - nanotechnology
