@@ -137,7 +137,7 @@ Comparación sistemática de 7 frameworks en pipeline Au₁₃ (token usage, lat
 - **smolagents** logra el menor uso de tokens (87K) y latencia (12.5s)
 - **LangGraph** y **Google ADK** ofrecen la mejor confiabilidad (100% éxito)
 - **MetaGPT** tiene el mayor overhead de coordinación
-- Ver detalles cuantitativos en [paper/latex/tables/table6_frameworks.tex](paper/latex/tables/table6_frameworks.tex)
+
 
 ### 🗄️ Selección de Backend Graph RAG
 
@@ -152,7 +152,7 @@ Comparación sistemática de 7 frameworks en pipeline Au₁₃ (token usage, lat
 - **Kùzu**: Investigación local embebida <1M nodos
 - **Neo4j**: Producción >1M nodos, alta concurrencia
 - **Graphiti**: Memoria episódica temporal para agentes de larga duración
-- Ver comparación detallada en [paper/latex/tables/table5_graphrag.tex](paper/latex/tables/table5_graphrag.tex)
+
 
 ---
 
