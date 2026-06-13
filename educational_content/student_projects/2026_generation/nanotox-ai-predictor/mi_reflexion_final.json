@@ -1,0 +1,39 @@
+{
+  "fecha": "2026-06-11",
+  "reflexion": {
+    "concepto_mas_valioso": "\n    [El como hacer un despliegue de un proyecto, es decir, como hacer que mi proyecto sea accesible para otars personas, sin la necessidad de que tengan conocimientos de programación o de IA, eso sin duda fue un concepto muy valioso para mi, porque me di cuenta de que ]\n    ",
+    "momento_aha": "\n    [Creo que la conexión del despliegue, eso sin duda fue un momento \"aha\" para mi, porque me di cuenta de que realmente podía compartir mi proyecto con otras personas]\n    ",
+    "mayor_dificultad": "\n    [Mi mayor dificultad fue entender como haría posible este proyecto, a pesar de que el profesor lo explicaba muy bien, había cosas que yo decía \"no voy a saber hacer eso\", pero al final, con paciencia y perseverancia, logré entenderlo y hacerlo funcional.]\n    ",
+    "orgullo_del_proyecto": "\n    [En general me siento muy orgullosa de todo mi proyecto, pero principalmente desde que me salió, es decir, desde que mi link de mi proyecto funcionó para el público en general y satisfacción que me dio al ver que si es funcional mi proyecto..]\n    ",
+    "si_empezara_de_nuevo": "\n    [Empezaría haciendo un plan más detallado, quizás con pasos más detallados, para no perderme tanto en el proceso. Pero también creo que es parte del aprendizaje, y que no hay una forma correcta de hacerlo. Lo importante es aprender de cada paso, incluso de los errores.]\n    ",
+    "proxima_habilidad": "\n    [Me gustaría aprender más sobre optimización bayesiana, porque creo que es una herramienta muy poderosa para mejorar los modelos de ML, y también me gustaría aprender más sobre sistemas multiagente porque creo que es el futuro de la IA, y me gustaría entender mejor como funcionan y como puedo aplicarlos en mis proyectos de investigación.]\n    ",
+    "aplicacion_real": "\n    [Planeo aplicar mi proyecto en futuras prácticas de laboratorio, investigaciones, incluso para mi tesis, siempre que necesite  filtrar nanopartículas candidatas antes de hacer ensayos in vitro. Es un proyecto muy interesante, porque te ahorras mucho tiempo de investigación]\n    ",
+    "consejo_para_futuros_estudiantes": "\n    [Que pongan atención en todo lo que se les enseña, porque es muy valioso. Y que no tengan miendo de equivoarse, porque es parte del proceso de aprendizaje. Y que se diviertan, explorando en este mundo de la IA]\n    "
+  },
+  "mapa_habilidades": {
+    "Modelado atomistico (ASE)": 3,
+    "Dinamica Molecular": 3,
+    "Descriptores moleculares": 3,
+    "ML clasico (sklearn)": 3,
+    "Redes neuronales (PyTorch)": 4,
+    "Optimizacion Bayesiana": 3,
+    "LLMs y prompting": 4,
+    "Embeddings y busqueda semantica": 3,
+    "Agentes ReAct (LangChain)": 3,
+    "Multi-agente (CrewAI)": 3,
+    "RAG": 3,
+    "Memoria de agentes": 3,
+    "FastAPI / despliegue": 4,
+    "Testing (pytest)": 2,
+    "Git / control de versiones": 2
+  },
+  "portafolio": {
+    "Notebooks ejecutables de U1-U6 en GitHub": true,
+    "README del repositorio con descripcion del curso": true,
+    "Proyecto integrador en repositorio propio": true,
+    "API desplegada (Render, Railway o similar)": true,
+    "Visualizaciones de resultados del proyecto": true,
+    "Publicacion o post sobre el proyecto (LinkedIn, blog)": true,
+    "Contribucion a un proyecto open-source de materiales": true
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "project": {
+    "name": "nanotox-ai-predictor",
+    "title": "Sistema Multi-Agente para Predicción de Toxicidad de Nanopartículas mediante Machine Learning",
+    "generation": "2026",
+    "submission_date": "2026-06-12",
+    "version": "1.0.0"
+  },
+  "author": {
+    "name": "Natalia Bermejo Soto",
+    "github": "Natalia31-code",
+    "email": "natalia.bermejo@student.ucemich.edu.mx",
+    "student_id": "20260001",
+    "orcid": null,
+    "linkedin": "https://linkedin.com/in/natalia-bermejo-soto",
+    "website": null
+  },
+  "academic": {
+    "course": "IA Aplicada a Nanotecnología",
+    "course_code": "NANO-AI-601",
+    "university": "Universidad de la Ciénega del Estado de Michoacán de Ocampo (UCEMICH)",
+    "department": "Trayectoria de Nanotecnología",
+    "advisor": "Mtro. Luis José Yudico Anaya",
+    "semester": "Primavera 2026",
+    "grade": null,
+    "evaluation_date": null,
+    "comments": null
+  },
+  "technical": {
+    "primary_language": "Python",
+    "python_version": "3.11",
+    "frameworks": [
+      "FastAPI",
+      "LangChain",
+      "LangGraph",
+      "scikit-learn"
+    ],
+    "ml_models": [
+      "Random Forest",
+      "Support Vector Machine",
+      "Multilayer Perceptron"
+    ],
+    "agent_framework": "LangGraph",
+    "scientific_tools": [
+      "Zenodo API",
+      "Materials Project API"
+    ],
+    "deployment": {
+      "api": "FastAPI + Uvicorn",
+      "frontend": "HTML5/CSS3/Vanilla JS Dashboard",
+      "containerization": "Docker",
+      "hosting": "Render"
+    },
+    "database": "Neo4j AuraDB + ChromaDB",
+    "testing": null
+  },
+  "research": {
+    "area": "Nanotoxicología",
+    "subfield": "Predicción de Toxicidad con ML",
+    "keywords": [
+      "nanoparticles",
+      "toxicity prediction",
+      "machine learning",
+      "multi-agent systems",
+      "fastapi",
+      "nanotox"
+    ],
+    "abstract": "Este proyecto implementa un pipeline de nanotoxicología automatizado mediante un sistema de 9 agentes coordinados por LangGraph. Los modelos Random Forest, SVM y MLP predicen la toxicidad de nanopartículas a partir de propiedades fisicoquímicas como el tamaño del núcleo, potencial zeta, área superficial, concentración y tiempo de exposición, exponiendo los resultados en un dashboard interactivo desplegado en Render.",
+    "methodology": "Modelos de clasificación supervisada evaluados con validación cruzada k-fold",
+    "dataset": {
+      "name": "HaHa-Manual.csv",
+      "size": 1150,
+      "source": "Zenodo (DOI: 10.5281/zenodo.15385143)",
+      "url": "https://zenodo.org/records/15385143"
+    },
+    "results": {
+      "accuracy": 0.85,
+      "precision": 0.84,
+      "recall": 0.86,
+      "f1_score": 0.85
+    },
+    "doi": null,
+    "paper_url": null,
+    "dataset_doi": "10.5281/zenodo.15385143"
+  },
+  "repository": {
+    "original": "https://github.com/Natalia31-code/nanotox-ai",
+    "institutional_archive": null,
+    "institutional_fork": null,
+    "archive_commit": null,
+    "archive_date": null,
+    "license": "MIT",
+    "stars": 0,
+    "forks": 0
+  },
+  "units_coverage": {
+    "unit_1_nanoscale_modeling": true,
+    "unit_2_molecular_simulation": true,
+    "unit_3_ml_nanomaterials": true,
+    "unit_4_applied_ai": true,
+    "unit_5_multi_agent": true,
+    "unit_6_integration": true
+  },
+  "deliverables": {
+    "u6_propuesta": true,
+    "u6_plan_tecnico": true,
+    "u6_implementacion": true,
+    "u6_reporte_final": true,
+    "u6_reflexion": true,
+    "readme_complete": true,
+    "code_documented": true,
+    "api_deployed": true,
+    "tests_included": false
+  },
+  "links": {
+    "demo_url": "https://nanotox-ai.onrender.com",
+    "video_demo": null,
+    "slides": null,
+    "documentation": null
+  },
+  "awards": [],
+  "publications_derived": [],
+  "citations": 0,
+  "downloads": 0,
+  "last_updated": "2026-06-12",
+  "status": "submitted",
+  "notes": ""
+}

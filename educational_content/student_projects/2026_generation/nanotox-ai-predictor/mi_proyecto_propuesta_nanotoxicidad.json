@@ -1,0 +1,58 @@
+{
+  "nombre": "Natalia",
+  "fecha": "2026-06-12",
+  "titulo": "Predicción de Toxicidad de Nanopartículas mediante Machine Learning",
+  "pregunta_de_investigacion": "¿Es posible predecir con precisión (F1 > 0.75) la toxicidad de nanopartículas metálicas a partir de sus propiedades fisicoquímicas (tamaño, potencial zeta, composición, concentración, tiempo de exposición) utilizando un sistema multi-agente basado en LangGraph con modelos de ML (Random Forest, SVM, MLP)?",
+  "justificacion": "La nanotoxicología es un campo crítico para la seguridad de los nanomateriales en aplicaciones biomédicas, farmacéuticas y medioambientales. Los ensayos biológicos tradicionales son costosos y lentos; los modelos de ML permiten predicciones rápidas a partir de propiedades fisicoquímicas medibles. La arquitectura multi-agente permite una solución modular, escalable y explicable, donde cada agente se especializa en una etapa del pipeline ML.",
+  "dominio": "Nanotecnología + Machine Learning + Sistemas Multi-Agente",
+  "fuente_de_datos": "Dataset público de Zenodo: 'Structured Nanotoxicity Datasets with Physicochemical and Toxicological Attributes of Metal Oxide Nanoparticles' (DOI: 10.5281/zenodo.15385143). Archivo principal: HaHa-Manual.csv (curación manual, mayor calidad). Complementado con datos de Materials Project API para propiedades adicionales.",
+  "n_muestras_estimado": 500,
+  "herramientas_a_usar": {
+    "U1_modelado_atomistico": false,
+    "U2_simulacion_MD_DFT": false,
+    "U3_ml_clasico": true,
+    "U3_redes_neuronales": true,
+    "U4_llms_generativa": true,
+    "U4_analisis_datos_exp": true,
+    "U5_agentes_langchain": true,
+    "U5_multiagente_crewai": false,
+    "U5_rag_memoria": true,
+    "U6_api_fastapi": false
+  },
+  "apis_utilizadas": [
+    "OpenRouter (LLM: google/gemma-3-12b-it:free)",
+    "LangSmith (observabilidad y trazas de agentes)",
+    "Neo4j AuraDB (memoria de grafo: nanopartículas, modelos, predicciones)",
+    "Materials Project API (propiedades fisicoquímicas adicionales)",
+    "Zenodo REST API (descarga de datasets)"
+  ],
+  "arquitectura_multiagente": {
+    "orquestador": "LangGraph StateGraph",
+    "agentes": [
+      "Agente 1: Coordinador (orquestador LangGraph)",
+      "Agente 2: Ingesta de Datos (Zenodo + Materials Project)",
+      "Agente 3: Limpieza de Datos (pandas, imputación, outliers)",
+      "Agente 4: Ingeniería de Features (SelectKBest, StandardScaler)",
+      "Agente 5: Entrenamiento ML (Random Forest, SVM, MLP)",
+      "Agente 6: Evaluador (Accuracy, F1, ROC-AUC, selección del mejor modelo)",
+      "Agente 7: Interpretabilidad (SHAP / feature_importances, LLM explanation)",
+      "Agente 8: Predicción (nuevas nanopartículas con nivel de riesgo)",
+      "Agente 9: Visualización y Reporte (matplotlib, Markdown via LLM)"
+    ],
+    "memoria_transversal": {
+      "semantica": "ChromaDB (papers de nanotoxicidad indexados)",
+      "grafo": "Neo4j AuraDB (relaciones Dataset→Modelo→Predicción)",
+      "sensorial": "LangGraph MemorySaver (checkpointing del estado)"
+    }
+  },
+  "pasos_del_proyecto": [
+    "1. Descarga y exploración del dataset Zenodo de nanotoxicidad (HaHa-Manual.csv)",
+    "2. Implementación de los 9 agentes especializados con LangGraph",
+    "3. Entrenamiento y comparación de 3 modelos ML (RF, SVM, MLP)",
+    "4. Interpretabilidad con SHAP y generación de explicaciones con LLM",
+    "5. Generación de reporte final automatizado con visualizaciones"
+  ],
+  "resultado_principal": "Sistema multi-agente funcional que: (1) descarga y procesa datos de nanotoxicidad, (2) entrena y evalúa modelos ML de clasificación, (3) predice el nivel de riesgo (bajo/moderado/alto) de nuevas nanopartículas, (4) genera reportes automáticos en Markdown con visualizaciones, y (5) almacena el conocimiento en Neo4j.",
+  "metrica_de_exito": "F1-score > 0.70 en el conjunto de prueba para el mejor modelo. ROC-AUC > 0.75. Sistema ejecutable de punta a punta sin errores.",
+  "riesgo_principal": "Si el dataset tiene muchos valores faltantes o desbalance de clases, el modelo puede no alcanzar las métricas objetivo. Mitigación: imputación robusta (mediana), class_weight='balanced' en los modelos, y uso de F1 en lugar de accuracy para evaluación en datasets desbalanceados."
+}
