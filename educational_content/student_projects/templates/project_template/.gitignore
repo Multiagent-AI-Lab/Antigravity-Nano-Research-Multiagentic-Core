@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Datos y modelos grandes (solo /data/sample y ejemplos pequeños van a git)
+data/raw/*
+data/processed/*
+!data/sample/
+!data/sample/.gitkeep
+models/*.pth
+models/*.pt
+models/*.h5
+models/*.pkl
+!models/.gitkeep
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Credenciales (NUNCA subir esto)
+.env
+*.key
+secrets.json
