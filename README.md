@@ -125,33 +125,6 @@ flowchart LR
 | **@Librarian** | Validación experimental (Materials Project) | `librarian_rag` |
 | **@QA** | Auditor supremo de calidad | `systematic-debugging`, `code-review-excellence` |
 
-### 📊 Benchmarks de Frameworks Multi-Agente
-
-Comparación sistemática de 7 frameworks en pipeline Au₁₃ (token usage, latencia, tasa de éxito, costo):
-
-<p align="center">
-  <img src="paper/figure4_performance.png" alt="Performance Comparison" width="600">
-</p>
-
-**Hallazgos clave:**
-- **smolagents** logra el menor uso de tokens (87K) y latencia (12.5s)
-- **LangGraph** y **Google ADK** ofrecen la mejor confiabilidad (100% éxito)
-- **MetaGPT** tiene el mayor overhead de coordinación
-
-### 🗄️ Selección de Backend Graph RAG
-
-Árbol de decisión para elegir entre NetworkX, Kùzu, Neo4j y Graphiti según volumen de datos y restricciones de despliegue:
-
-<p align="center">
-  <img src="paper/figure6_graphrag_decision.png" alt="Graph RAG Decision Tree" width="600">
-</p>
-
-**Guía de selección:**
-- **NetworkX**: Prototipos <10K nodos, cero configuración
-- **Kùzu**: Investigación local embebida <1M nodos
-- **Neo4j**: Producción >1M nodos, alta concurrencia
-- **Graphiti**: Memoria episódica temporal para agentes de larga duración
-
 ---
 
 ## 📦 Requisitos del Sistema
