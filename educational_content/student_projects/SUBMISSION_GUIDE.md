@@ -202,6 +202,12 @@ Edita `educational_content/student_projects/2026_generation/tu-proyecto-nombre/m
     "institutional_fork": null,
     "archive_commit": null,
     "license": "MIT"
+  },
+  "links": {
+    "demo_url": "https://tu-proyecto.onrender.com",
+    "video_demo": null,
+    "slides": null,
+    "documentation": null
   }
 }
 ```
@@ -212,6 +218,7 @@ Edita `educational_content/student_projects/2026_generation/tu-proyecto-nombre/m
 - `technical.frameworks`: Lista todas las librerías principales
 - `research.abstract`: Resume qué hace tu proyecto y por qué es importante
 - `repository.original`: URL de TU repositorio personal
+- `links.demo_url`: **Obligatorio** — URL pública donde tu API/aplicación está desplegada y accesible
 
 ---
 
@@ -222,6 +229,7 @@ Edita `educational_content/student_projects/2026_generation/tu-proyecto-nombre/R
 - Descripción del proyecto (2-3 párrafos)
 - Instrucciones de instalación paso a paso
 - Ejemplos de uso con código
+- **Sección "Probar la Demo Pública"**: enlace de la API/aplicación desplegada, con ejemplo de request (curl) o captura de pantalla mostrando input/output real
 - Resultados con métricas
 - Estructura del proyecto
 - Licencia y contacto
@@ -345,6 +353,7 @@ El instructor revisará:
 - ✅ Documentación completa
 - ✅ Cumplimiento de objetivos de la Unidad 6
 - ✅ Formato y estructura
+- ✅ Demo pública accesible (se prueba el enlace en incógnito)
 
 ### **Después del Merge**
 
