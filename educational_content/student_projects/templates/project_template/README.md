@@ -322,7 +322,7 @@ Este proyecto está bajo la licencia **MIT** - ver archivo [LICENSE](LICENSE) pa
 ## 🔗 Enlaces
 
 - **Repositorio original**: https://github.com/[tu-usuario]/[tu-proyecto]
-- **Demo en vivo**: https://[tu-proyecto].onrender.com (si aplica)
+- **Demo en vivo (Obligatorio)**: https://[tu-proyecto].onrender.com
 - **Dataset**: https://huggingface.co/datasets/[tu-usuario]/[dataset] (si aplica)
 - **Video demo**: https://youtube.com/watch?v=... (opcional)
 

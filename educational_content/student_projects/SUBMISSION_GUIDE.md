@@ -54,6 +54,13 @@ Antes de enviar tu Pull Request, verifica:
   - `mi_proyecto_reporte_final.json`
   - `mi_reflexion_final.json`
 
+### ✅ **Demo Pública (Obligatorio)**
+- [ ] API o aplicación desplegada en un hosting público (Render, Railway, Hugging Face Spaces, etc.)
+- [ ] Enlace de demo incluido en `README.md` (sección "Enlaces") y en `metadata.json` (`links.demo_url`)
+- [ ] Enlace probado en una ventana de incógnito para confirmar que es accesible sin tu sesión/API keys personales
+
+**¿Por qué es obligatorio?** El objetivo de la Unidad 6 es completar el pipeline end-to-end (datos → modelo → API → deployment). Sin un enlace público funcional, tus compañeros e instructor no pueden verificar ni probar tu proyecto sin clonar y ejecutar el código localmente.
+
 ---
 
 ## 🚀 Proceso de Entrega (Paso a Paso)
@@ -298,7 +305,7 @@ git push origin student/tu-nombre-proyecto
 ## 🔗 Enlaces
 
 - **Repositorio original**: https://github.com/TU-USUARIO/tu-proyecto
-- **Demo (si aplica)**: https://tu-proyecto.render.com
+- **Demo pública (Obligatorio)**: https://tu-proyecto.render.com
 - **Video demo (opcional)**: https://youtube.com/...
 
 ---
@@ -313,6 +320,7 @@ git push origin student/tu-nombre-proyecto
 - [x] Licencia incluida
 - [x] Archivos JSON de Unidad 6
 - [x] Código ejecutable sin errores
+- [x] Demo pública desplegada y enlace verificado
 
 ---
 
