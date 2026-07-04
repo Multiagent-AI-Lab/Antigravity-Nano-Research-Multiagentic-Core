@@ -180,9 +180,7 @@ Edita `educational_content/student_projects/2026_generation/tu-proyecto-nombre/m
   "academic": {
     "course": "IA Aplicada a Nanotecnología",
     "university": "Universidad XYZ",
-    "advisor": "Mtro. Luis José Yudico Anaya",
-    "grade": null,
-    "evaluation_date": null
+    "advisor": "Mtro. Luis José Yudico Anaya"
   },
   "technical": {
     "primary_language": "Python",
@@ -346,21 +344,22 @@ Agradezco al Mtro. Luis José Yudico Anaya por la mentoría durante el desarroll
 
 ## ⏳ ¿Qué Pasa Después?
 
-### **Revisión (1-3 días hábiles)**
+Este archivo reúne los proyectos que ya fueron evaluados y aprobados como parte del curso — el Pull Request no es una entrega para calificar, sino el proceso de archivo permanente de un trabajo que ya cumplió los objetivos de la Unidad 6.
 
-El instructor revisará:
-- ✅ Calidad del código
-- ✅ Documentación completa
-- ✅ Cumplimiento de objetivos de la Unidad 6
-- ✅ Formato y estructura
+### **Verificación técnica (1-3 días hábiles)**
+
+Antes del merge se verifica:
+- ✅ Estructura completa (código, notebooks, `README.md`, `metadata.json`, licencia)
 - ✅ Demo pública accesible (se prueba el enlace en incógnito)
+- ✅ Archivos JSON de la Unidad 6 completados
+- ✅ Sin información sensible (API keys, credenciales, datos privados)
 
 ### **Después del Merge**
 
 1. **Tu proyecto está archivado**: Visible en  
    `https://github.com/Multiagent-AI-Lab/.../student_projects/2026_generation/`
 
-2. **Recibirás calificación**: El instructor actualiza `metadata.json` con tu `grade`
+2. **Apareces como Contributor del repositorio**: El merge se hace con "Merge commit" (no squash), por lo que tus commits originales —con tu nombre y email— quedan intactos en el historial. Aparecerás automáticamente en la lista de [Contributors](https://github.com/Multiagent-AI-Lab/Antigravity-Nano-Research-Multiagentic-Core/graphs/contributors) del repositorio raíz.
 
 3. **Al final del semestre**: Se crea un **Release** con DOI de Zenodo  
    → Recibirás notificación con tu DOI personal

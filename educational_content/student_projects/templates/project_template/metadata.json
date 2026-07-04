@@ -21,10 +21,7 @@
     "university": "Universidad XYZ",
     "department": "Departamento de Química Computacional",
     "advisor": "Mtro. Luis José Yudico Anaya",
-    "semester": "Primavera 2026",
-    "grade": null,
-    "evaluation_date": null,
-    "comments": null
+    "semester": "Primavera 2026"
   },
   "technical": {
     "primary_language": "Python",

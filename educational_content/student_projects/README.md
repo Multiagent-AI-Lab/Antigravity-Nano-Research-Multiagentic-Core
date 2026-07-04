@@ -74,16 +74,6 @@ project_template/
 └── docs/               # Documentación adicional
 ```
 
-### Criterios de Evaluación
-
-Los proyectos se evalúan según:
-- **40%**: Calidad técnica (código, arquitectura, rendimiento)
-- **30%**: Documentación (README, docstrings, notebooks)
-- **20%**: Innovación (originalidad, impacto potencial)
-- **10%**: Presentación (claridad, visualizaciones)
-
-**Calificación mínima para aprobar**: 70/100
-
 ---
 
 ## 🔒 Política de Archivo
