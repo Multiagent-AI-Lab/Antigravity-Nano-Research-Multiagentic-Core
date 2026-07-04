@@ -58,6 +58,7 @@ Antes de enviar tu Pull Request, verifica:
 - [ ] API o aplicación desplegada en un hosting público (Render, Railway, Hugging Face Spaces, etc.)
 - [ ] Enlace de demo incluido en `README.md` (sección "Enlaces") y en `metadata.json` (`links.demo_url`)
 - [ ] Enlace probado en una ventana de incógnito para confirmar que es accesible sin tu sesión/API keys personales
+- [ ] Sección "Probar la Demo Pública" en el `README.md` explicando qué input espera la API/interfaz y qué output devuelve, con un ejemplo concreto (curl o captura de pantalla)
 
 **¿Por qué es obligatorio?** El objetivo de la Unidad 6 es completar el pipeline end-to-end (datos → modelo → API → deployment). Sin un enlace público funcional, tus compañeros e instructor no pueden verificar ni probar tu proyecto sin clonar y ejecutar el código localmente.
 

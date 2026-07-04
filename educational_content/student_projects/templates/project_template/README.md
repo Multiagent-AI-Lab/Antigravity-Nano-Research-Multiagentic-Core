@@ -165,6 +165,21 @@ streamlit run src/app.py
 # Acceder a: http://localhost:8501
 ```
 
+### Probar la Demo Pública
+
+No necesitas instalar nada para probar el proyecto ya desplegado:
+
+**URL**: https://[tu-proyecto].onrender.com
+
+```bash
+# Ejemplo de request a la demo publica (reemplaza con tu endpoint real)
+curl -X POST "https://[tu-proyecto].onrender.com/predict" \
+  -H "Content-Type: application/json" \
+  -d '{"input": "tu_dato"}'
+```
+
+[Describe aquí qué input espera tu API/interfaz y qué output devuelve, con un ejemplo concreto de uso]
+
 ---
 
 ## 📊 Resultados
