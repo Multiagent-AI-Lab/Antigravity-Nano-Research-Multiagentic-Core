@@ -89,22 +89,47 @@ Esta sección contiene material educativo estructurado para aprender **IA aplica
 
 ---
 
+### ✅ Unidad 5: Sistemas Multi-Agente e IA Generativa
+**Ruta**: [`unit_05_multi_agent_sys/`](unit_05_multi_agent_sys/)
+
+**Contenido** (10 notebooks):
+- Fundamentos de agentes modernos
+- Orquestación avanzada (LangGraph, CrewAI, Google ADK)
+- Memoria avanzada (RAG, Graph RAG)
+- Agentes multimodales y producción
+
+**Nivel**: Posgrado / Especialización  
+**Duración estimada**: 12-16 horas  
+**Prerrequisitos**: Unidades 1 a 4
+
+[📓 Ir a la Unidad 5](unit_05_multi_agent_sys/)
+
+---
+
+### ✅ Unidad 6: Proyecto de Integración
+**Ruta**: [`unit_06_integration_project/`](unit_06_integration_project/)
+
+**Contenido** (6 notebooks):
+- Propuesta de proyecto y catalogación de herramientas
+- Scaffold de implementación adaptable (Nano + IA)
+- Despliegue y reporte de evaluación
+- Meta-reflexión final
+
+**Nivel**: Posgrado / Especialización  
+**Duración estimada**: 15-20 horas  
+**Prerrequisitos**: Unidades 1 a 5
+
+[📓 Ir a la Unidad 6](unit_06_integration_project/)
+
+---
+
 ## 🚧 Próximas Unidades (En Desarrollo)
-
-### Unidad 5: Sistemas Multi-Agente e IA Generativa
-- Arquitecturas multi-agente
-- Agentic AI
-- Ejemplos avanzados
-
-### Unidad 6: Proyecto de Integración
-- Proyecto final completo
-- Publicación científica
-- Mejores prácticas
 
 ### Unidad 7: Computación Científica Profesional
 - Testing y validación
 - Escalabilidad
 - Deployment
+
 
 ---
 
@@ -160,8 +185,8 @@ Cada unidad sigue el **Gold Standard** definido en [GOVERNANCE.md](../GOVERNANCE
 | 2. Simulación Molecular | ✅ Disponible | ✅✅ (2 notebooks) |
 | 3. ML Fundamentos | ✅ Disponible | ✅✅ (2 notebooks) |
 | 4. IA Aplicada | ✅ Disponible | ✅✅ (2 notebooks) |
-| 5. Multi-Agente | 🚧 En desarrollo | - |
-| 6. Proyecto Final | 🚧 En desarrollo | - |
+| 5. Multi-Agente | ✅ Disponible | ✅ (10 notebooks) |
+| 6. Proyecto Final | ✅ Disponible | ✅ (6 notebooks) |
 | 7. Computación Profesional | 🚧 En desarrollo | - |
 
 ---

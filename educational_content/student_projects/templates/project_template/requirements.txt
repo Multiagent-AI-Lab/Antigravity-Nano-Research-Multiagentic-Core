@@ -1,0 +1,33 @@
+# Requirements base para proyectos finales - IA Aplicada a Nanotecnologia
+# Ajusta las versiones y quita/agrega librerias segun tu proyecto
+
+# Core ML
+torch>=2.1.0
+scikit-learn>=1.3.0
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Agentes / LLM (elige el que uses)
+langchain>=0.1.0
+# crewai>=0.30.0
+# pyautogen>=0.2.0
+
+# Librerias cientificas (descomenta segun tu dominio)
+# rdkit>=2023.9.1
+# ase>=3.22.1
+# openmm>=8.0
+# psi4
+
+# Deployment
+fastapi>=0.110.0
+uvicorn>=0.29.0
+streamlit>=1.32.0
+pydantic>=2.6.0
+
+# Testing
+pytest>=8.0.0
+pytest-cov>=4.1.0
+
+# Utilidades
+python-dotenv>=1.0.0
+loguru>=0.7.0
